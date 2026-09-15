@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book a free 15-minute AI visibility snapshot with Zenith.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="/book/">
+  <title>Book a Free AI Visibility Snapshot | Zenith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #14172b;
+      --ink-soft: #1d2140;
+      --cream: #fbf7ec;
+      --white: #fff;
+      --cyan: #5fe0e0;
+      --lavender: #c9b6f2;
+      --pink: #f2a8e0;
+      --mint: #b8f0d8;
+      --graphite: #4b5165;
+      --muted: #8288a0;
+      --line: rgba(20, 23, 43, .15);
+      --pad: clamp(22px, 5.5vw, 76px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.55 Inter, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .page { width: min(100%, 1320px); margin-inline: auto; overflow: hidden; }
+    .nav { height: 84px; display: flex; align-items: center; justify-content: space-between; padding-inline: var(--pad); border-bottom: 1px solid var(--line); }
+    .logo { display: inline-flex; align-items: center; gap: 7px; font: 600 22px/1 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .logo::before { content:""; width: 9px; height: 9px; border-radius: 1px; background: currentColor; transform: translateY(-7px); }
+    .back { color: var(--graphite); font-size: 13px; font-weight: 600; }
+    .back:hover { color: var(--ink); }
+    .hero { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(55px, 9vw, 130px); padding: clamp(78px, 10vw, 135px) var(--pad) clamp(70px, 8vw, 110px); background: radial-gradient(70% 110% at 0% 0%, rgba(95,224,224,.6), transparent 62%), radial-gradient(65% 100% at 100% 10%, rgba(242,168,224,.52), transparent 66%), radial-gradient(70% 90% at 55% 100%, rgba(184,240,216,.58), transparent 70%), radial-gradient(70% 90% at 55% 0%, rgba(201,182,242,.52), transparent 70%), var(--cream); }
+    .eyebrow { margin: 0 0 22px; color: var(--graphite); font-size: 12px; font-weight: 600; }
+    h1 { max-width: 720px; margin: 0 0 30px; font: 600 clamp(52px, 6.5vw, 88px)/.98 "Space Grotesk", sans-serif; letter-spacing: -.055em; text-transform: lowercase; }
+    .hero-copy > p:not(.eyebrow) { max-width: 650px; color: var(--graphite); font-size: 17px; }
+    .snapshot-meta { align-self: end; padding: 30px; border: 1px solid var(--line); background: rgba(255,255,255,.48); }
+    .snapshot-meta strong { display: block; margin-bottom: 9px; font: 600 25px "Space Grotesk", sans-serif; letter-spacing: -.035em; }
+    .snapshot-meta p { margin: 0; color: var(--graphite); font-size: 13px; }
+
+    .booking { padding: clamp(76px, 9vw, 125px) var(--pad); background: var(--white); }
+    .booking-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(45px, 7vw, 95px); align-items: start; }
+    .details-panel { min-width: 0; }
+    h2 { margin: 0 0 12px; font: 600 clamp(35px, 4.2vw, 58px)/1 "Space Grotesk", sans-serif; letter-spacing: -.05em; text-transform: lowercase; }
+    .time-meta { margin: 0 0 35px; color: var(--graphite); font-size: 13px; font-weight: 600; }
+    .timezone { display: flex; align-items: center; gap: 10px; margin: 0 0 30px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--graphite); font-size: 12px; }
+    .timezone::before { content:"◉"; color: var(--ink); }
+    form { display: grid; gap: 16px; }
+    label { display: grid; gap: 7px; color: var(--ink); font-size: 12px; font-weight: 600; }
+    input, select, textarea { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid var(--line); border-radius: 2px; background: var(--cream); color: var(--ink); font: 14px Inter, sans-serif; }
+    textarea { min-height: 132px; padding-block: 13px; resize: vertical; line-height: 1.5; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid var(--cyan); outline-offset: 2px; border-color: var(--ink); }
+    .optional { color: var(--muted); font-weight: 400; }
+    .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 20px; border: 1px solid var(--ink); border-radius: 2px; background: var(--ink); color: var(--white); font: 600 13px Inter, sans-serif; cursor: pointer; transition: transform .2s ease, background-color .2s ease; }
+    .button:hover { transform: translateY(-2px); background: var(--ink-soft); }
+    .button:disabled { cursor: wait; opacity: .68; transform: none; }
+    .button:focus-visible, a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+    .privacy-note { margin: 4px 0 0; color: var(--muted); font-size: 10px; }
+    .form-status { min-height: 20px; margin: 0; color: #8b2d46; font-size: 12px; }
+    .next-panel { min-height: 560px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(30px, 4vw, 52px); border: 1px solid var(--line); border-radius: 4px; color: var(--white); background: radial-gradient(95% 70% at 0% 0%, rgba(95,224,224,.24), transparent 66%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.2), transparent 70%), var(--ink); }
+    .next-panel .eyebrow { color: var(--lavender); }
+    .next-panel h2 { max-width: 430px; margin-bottom: 24px; }
+    .next-panel > div > p { max-width: 450px; color: #c3c6d4; }
+    .next-list { margin: 45px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
+    .next-list li { display: grid; grid-template-columns: 32px 1fr; gap: 13px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.2); color: #d7d9e2; font-size: 12px; }
+    .next-list span { color: var(--cyan); font-size: 10px; }
+    .response-time { margin: 38px 0 0; color: #9da1b5; font-size: 11px; }
+    .after-booking { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 46px; }
+    .after-item { padding: 20px; border: 1px solid var(--line); background: var(--cream); }
+    .after-item span { display: block; margin-bottom: 13px; color: var(--muted); font-size: 10px; }
+    .after-item strong { display: block; margin-bottom: 7px; font: 600 16px "Space Grotesk", sans-serif; }
+    .after-item p { margin: 0; color: var(--graphite); font-size: 11px; }
+    .request-confirmed { min-height: 560px; display: none; grid-column: 1 / -1; flex-direction: column; justify-content: center; padding: clamp(32px, 5vw, 64px); border: 1px solid var(--line); background: radial-gradient(90% 70% at 5% 5%, rgba(95,224,224,.56), transparent 70%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.4), transparent 72%), var(--cream); }
+    .request-confirmed.visible { display: flex; }
+    .request-confirmed .check { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 34px; border-radius: 50%; background: var(--ink); color: var(--white); }
+    .request-confirmed h2 { max-width: 560px; }
+    .request-confirmed p { max-width: 580px; color: var(--graphite); }
+    .request-confirmed .submitted-email { color: var(--ink); font-weight: 600; overflow-wrap: anywhere; }
+    [hidden] { display: none !important; }
+    footer { display: flex; justify-content: space-between; gap: 30px; padding: 35px var(--pad); background: var(--ink); color: #c2c5d3; font-size: 11px; }
+    footer .logo { color: var(--white); }
+
+    @media (max-width: 900px) {
+      .hero, .booking-grid { grid-template-columns: 1fr; }
+      .booking-grid { gap: 55px; }
+      .after-booking { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav { height: 72px; }
+      .hero { padding-top: 72px; }
+      h1 { font-size: clamp(47px, 14vw, 68px); }
+      .snapshot-meta { padding: 24px; }
+      .booking { padding-inline: 18px; }
+      .next-panel, .request-confirmed { min-height: 440px; }
+      footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header><nav class="nav" aria-label="Booking navigation"><a class="logo" href="../Zenith_Website_Layout.html">zenith</a><a class="back" href="../Zenith_Website_Layout.html">← Back to website</a></nav></header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Free AI visibility snapshot</p>
+          <h1>book your free AI visibility snapshot.</h1>
+          <p>In 15 minutes, we’ll explore three questions a potential customer might ask about your services and review what appears in ChatGPT and Google.</p>
+          <p>You’ll leave with a clearer understanding of your starting point and whether a full audit makes sense.</p>
+          <p>Please share your website before the call so we can make the conversation useful.</p>
+        </div>
+        <aside class="snapshot-meta"><strong>Request your booking link</strong><p>Free · 15 minutes · Video call</p></aside>
+      </section>
+
+      <section class="booking" id="request-link">
+        <div class="booking-grid">
+          <div class="details-panel" id="form-panel">
+            <p class="eyebrow">Request your invitation</p>
+            <h2>tell us about your business.</h2>
+            <p class="time-meta">A little context helps us prepare three useful questions before the call.</p>
+            <p class="timezone">Your timezone: <strong id="timezone">Detecting…</strong></p>
+            <form id="booking-details" action="/api/booking-request" method="post">
+              <label>Your name<input id="name" name="name" autocomplete="name" required></label>
+              <label>Work email<input id="email" name="email" type="email" autocomplete="email" required></label>
+              <label>Business name<input id="business" name="business" autocomplete="organization" required></label>
+              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label>
+              <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="Tell us what you want customers to find, where visibility feels unclear, or what prompted you to look into AI search." required></textarea></label>
+              <label>Optional competitor <span class="optional">If there’s one you want us to compare</span><input id="competitor" name="competitor" autocomplete="organization"></label>
+              <label>What are you most interested in?<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option></select></label>
+              <input id="timezone-field" name="timezone" type="hidden">
+              <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
+              <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
+              <p class="privacy-note">We’ll use these details to prepare for the snapshot and send the Calendly booking link to your email.</p>
+            </form>
+          </div>
+
+          <aside class="next-panel" id="next-panel">
+            <div><p class="eyebrow">What happens next</p><h2>check your inbox. choose your time.</h2><p>Once we receive your details, we’ll email you the private Calendly link for the free snapshot.</p><ul class="next-list"><li><span>01</span>Submit your business context</li><li><span>02</span>Receive the booking link by email</li><li><span>03</span>Choose the 15-minute time that suits you</li></ul></div>
+            <p class="response-time">The booking email should arrive shortly after your request is received.</p>
+          </aside>
+
+          <div class="request-confirmed" id="request-confirmed" role="status" aria-live="polite">
+            <span class="check">✓</span>
+            <p class="eyebrow">Request received</p>
+            <h2>your booking link is on its way.</h2>
+            <p>We’ll send the Calendly link to <span class="submitted-email" id="submitted-email"></span>. Use it to choose your preferred 15-minute slot.</p>
+            <p>If it does not arrive, check your spam or promotions folder before submitting another request.</p>
+          </div>
+        </div>
+
+        <div class="after-booking" aria-label="What happens after booking">
+          <div class="after-item"><span>01</span><strong>Email invitation</strong><p>We send the private Calendly link to the address you provide.</p></div>
+          <div class="after-item"><span>02</span><strong>Choose a time</strong><p>Open the link and select an available 15-minute slot.</p></div>
+          <div class="after-item"><span>03</span><strong>Calendar confirmation</strong><p>Calendly provides the video-call invitation and rescheduling details.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer><a class="logo" href="../Zenith_Website_Layout.html">zenith</a><span>AI visibility audits, implementation, and ongoing measurement.</span></footer>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var allowedInterests = ['snapshot', 'visibility-audit', 'growth', 'authority'];
+      var requestedInterest = params.get('interest');
+      var interest = allowedInterests.indexOf(requestedInterest) >= 0 ? requestedInterest : 'snapshot';
+      var form = document.getElementById('booking-details');
+      var interestField = document.getElementById('interest');
+      var timezoneField = document.getElementById('timezone-field');
+      var submitButton = document.getElementById('submit-button');
+      var formStatus = document.getElementById('form-status');
+
+      window.dataLayer = window.dataLayer || [];
+      interestField.value = interest;
+
+      try {
+        var detectedTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local time';
+        document.getElementById('timezone').textContent = detectedTimezone;
+        timezoneField.value = detectedTimezone;
+      } catch (error) {
+        document.getElementById('timezone').textContent = 'Local time';
+        timezoneField.value = 'Local time';
+      }
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        formStatus.textContent = '';
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var originalButtonText = submitButton.innerHTML;
+        var payload = Object.fromEntries(new FormData(form).entries());
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending request…';
+
+        try {
+          /* Set window.ZENITH_BOOKING_ENDPOINT to the live email/API endpoint when the backend is ready. */
+          if (window.ZENITH_BOOKING_ENDPOINT) {
+            var response = await fetch(window.ZENITH_BOOKING_ENDPOINT, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            if (!response.ok) throw new Error('Request failed');
+          } else {
+            /* Frontend preview only: simulate a successful request without transmitting form data. */
+            await new Promise(function (resolve) { window.setTimeout(resolve, 650); });
+          }
+
+          window.dataLayer.push({
+            event: 'booking_request_submitted',
+            booking_interest: payload.interest
+          });
+          document.dispatchEvent(new CustomEvent('zenith:booking-requested', { detail: { interest: payload.interest } }));
+          document.getElementById('submitted-email').textContent = payload.email;
+          document.getElementById('form-panel').hidden = true;
+          document.getElementById('next-panel').hidden = true;
+          document.getElementById('request-confirmed').classList.add('visible');
+          document.getElementById('request-confirmed').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (error) {
+          formStatus.textContent = 'We could not send your request. Please try again.';
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      });
+    }());
+  </script>
+</body>
+</html>

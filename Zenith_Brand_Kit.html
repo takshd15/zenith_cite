@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zenith — Brand Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14172B;
+    --ink-soft:#1D2140;
+    --cyan:#5FE0E0;
+    --mint:#B8F0D8;
+    --lavender:#C9B6F2;
+    --pink:#F2A8E0;
+    --cream:#FBF7EC;
+    --graphite:#4B5165;
+    --graphite-soft:#8288A0;
+    --white:#FFFFFF;
+    --line:#E4E1D6;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--graphite);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 40px;}
+  h1,h2,h3{font-family:'Space Grotesk', sans-serif; color:var(--ink); font-weight:600;}
+
+  .holo{
+    background:
+      radial-gradient(120% 140% at 8% 10%, var(--cream) 0%, transparent 45%),
+      radial-gradient(90% 120% at 85% 15%, var(--pink) 0%, transparent 50%),
+      radial-gradient(110% 130% at 50% 90%, var(--cyan) 0%, transparent 55%),
+      radial-gradient(100% 110% at 30% 60%, var(--lavender) 0%, transparent 50%),
+      radial-gradient(90% 100% at 70% 70%, var(--mint) 0%, transparent 50%),
+      var(--cream);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    color:var(--ink);
+    padding:110px 0 96px 0;
+    position:relative;
+  }
+  .mark-lockup{display:flex; align-items:center; gap:2px; margin-bottom:40px;}
+  .mark-sq{width:16px; height:16px; background:var(--ink); border-radius:2px; margin-bottom:34px;}
+  .hero h1{
+    font-size:88px;
+    font-weight:600;
+    letter-spacing:-0.03em;
+    line-height:0.96;
+    color:var(--ink);
+    text-transform:lowercase;
+  }
+  .hero .sub{
+    margin-top:26px;
+    font-size:18px;
+    color:var(--graphite);
+    max-width:460px;
+    font-weight:400;
+  }
+  .hero .tag{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid rgba(20,23,43,0.15);
+    font-size:13px;
+    color:var(--graphite);
+    letter-spacing:0.02em;
+    display:flex;
+    gap:28px;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:76px 0;}
+  section.alt{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .kicker{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink);
+    margin-bottom:10px;
+    opacity:0.55;
+  }
+  .sec-title{font-size:34px; margin-bottom:14px; max-width:560px; text-transform:lowercase;}
+  .sec-intro{font-size:15.5px; color:var(--graphite); max-width:520px; margin-bottom:48px;}
+
+  /* ---------- COLOR ---------- */
+  .swatch-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .swatch{border-radius:4px; overflow:hidden; border:1px solid var(--line);}
+  .swatch .block{height:140px;}
+  .swatch .info{padding:16px 18px; background:var(--white);}
+  .swatch .name{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:16px; color:var(--ink); margin-bottom:4px;}
+  .swatch .role{font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--graphite-soft); margin-bottom:10px;}
+  .swatch .hex{font-size:13px; color:var(--graphite); font-variant-numeric:tabular-nums;}
+  .swatch .hex span{color:var(--graphite-soft);}
+
+  .ratio-bar{display:flex; height:14px; border-radius:7px; overflow:hidden; margin-top:36px; border:1px solid var(--line);}
+  .ratio-label{display:flex; justify-content:space-between; font-size:11.5px; color:var(--graphite-soft); margin-top:10px; flex-wrap:wrap; gap:6px;}
+
+  /* ---------- TYPE ---------- */
+  .type-row{display:grid; grid-template-columns:180px 1fr; gap:32px; padding:28px 0; border-top:1px solid var(--line); align-items:baseline;}
+  .type-row:last-child{border-bottom:1px solid var(--line);}
+  .type-meta{font-size:12.5px; color:var(--graphite-soft); line-height:1.6;}
+  .type-meta b{color:var(--ink); font-weight:600; font-family:'Inter',sans-serif;}
+  .specimen-h1{font-size:52px; font-weight:600; color:var(--ink); letter-spacing:-0.02em; text-transform:lowercase; font-family:'Space Grotesk', sans-serif;}
+  .specimen-h2{font-size:28px; font-weight:500; color:var(--ink); text-transform:lowercase; font-family:'Space Grotesk', sans-serif;}
+  .specimen-body{font-size:16px; color:var(--graphite); max-width:460px;}
+  .specimen-ui{font-size:13px; font-weight:600; color:var(--ink); text-transform:none; letter-spacing:0.01em;}
+
+  /* ---------- LOGO USAGE ---------- */
+  .logo-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  .logo-card{border:1px solid var(--line); border-radius:4px; padding:40px; display:flex; align-items:center; justify-content:center; min-height:160px;}
+  .logo-card.light{background:var(--white);}
+  .logo-card.dark{background:var(--ink);}
+  .logo-card svg{height:40px;}
+  .clearspace{margin-top:20px; font-size:13px; color:var(--graphite-soft); max-width:480px;}
+
+  .donts{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:40px;}
+  .dont-card{border:1px solid var(--line); border-radius:4px; padding:24px 26px;}
+  .dont-card .x{font-size:12px; font-weight:600; color:#B4472F; letter-spacing:0.03em; margin-bottom:8px;}
+  .dont-card p{font-size:13.5px; color:var(--graphite);}
+
+  /* ---------- VOICE ---------- */
+  .voice-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
+  .voice-card{padding:28px 0; border-top:2px solid var(--ink);}
+  .voice-card h3{font-size:19px; margin-bottom:10px; text-transform:lowercase;}
+  .voice-card p{font-size:13.5px; color:var(--graphite); margin-bottom:16px;}
+  .voice-card .ex{font-size:13px; padding:12px 14px; background:var(--white); border:1px solid var(--line); border-radius:4px; color:var(--ink); font-style:italic;}
+
+  /* ---------- APPLIED ---------- */
+  .applied-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:20px;}
+  .card-mock{
+    border-radius:6px; padding:32px; color:var(--ink); aspect-ratio:1.75/1;
+    display:flex; flex-direction:column; justify-content:space-between;
+    border:1px solid var(--line);
+  }
+  .card-mock .nm{font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; text-transform:lowercase;}
+  .card-mock .role{font-size:11px; color:var(--graphite); margin-top:2px;}
+  .card-mock .contact{font-size:11px; color:var(--graphite);}
+
+  .avatar-mock{
+    background:var(--ink); border-radius:6px; aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .avatar-mock .mark-sq{background:var(--white); margin:0;}
+  .avatar-mock span{font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:600; color:var(--white); text-transform:lowercase; margin-left:6px;}
+
+  /* ---------- FOOTER STRIP ---------- */
+  .strip{background:var(--ink); color:var(--white); padding:44px 0;}
+  .strip-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; font-size:12.5px;}
+  .strip-grid b{display:block; color:var(--cyan); font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; margin-bottom:8px; text-transform:lowercase;}
+  .strip-grid div{color:#B9BDD4;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero holo">
+  <div class="wrap">
+    <div class="mark-sq"></div>
+    <h1>zenith.</h1>
+    <div class="sub">Brand kit for the AI visibility agency helping businesses get found — and cited — by ChatGPT, Perplexity, Gemini, and Google AI Overviews.</div>
+    <div class="tag">
+      <span>Version 2.0</span>
+      <span>Prepared September 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- COLOR -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Color</div>
+    <h2 class="sec-title">a holographic surface, an ink anchor.</h2>
+    <p class="sec-intro">The holographic gradient — cyan, mint, lavender, pink, cream — is now the brand's dominant surface: it's where Zenith lives, on hero moments, backgrounds, and key visuals. Ink Indigo anchors every piece of text and UI on top of it, keeping the brand legible and serious against a playful backdrop.</p>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="block" style="background:linear-gradient(135deg, var(--cream), var(--pink), var(--cyan), var(--lavender), var(--mint));"></div>
+        <div class="info">
+          <div class="name">Holo Gradient</div>
+          <div class="role">Primary · Dominant surface</div>
+          <div class="hex">Multi-stop <span>· see below</span></div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:var(--ink);"></div>
+        <div class="info">
+          <div class="name">Ink Indigo</div>
+          <div class="role">Text · UI · Anchor</div>
+          <div class="hex">#14172B <span>· RGB 20,23,43</span></div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:var(--cream);"></div>
+        <div class="info">
+          <div class="name">Cream</div>
+          <div class="role">Base · Light background</div>
+          <div class="hex">#FBF7EC <span>· RGB 251,247,236</span></div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:var(--cyan);"></div>
+        <div class="info">
+          <div class="name">Holo Cyan</div>
+          <div class="role">Gradient stop</div>
+          <div class="hex">#5FE0E0 <span>· RGB 95,224,224</span></div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:var(--lavender);"></div>
+        <div class="info">
+          <div class="name">Holo Lavender</div>
+          <div class="role">Gradient stop</div>
+          <div class="hex">#C9B6F2 <span>· RGB 201,182,242</span></div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:var(--pink);"></div>
+        <div class="info">
+          <div class="name">Holo Pink</div>
+          <div class="role">Gradient stop</div>
+          <div class="hex">#F2A8E0 <span>· RGB 242,168,224</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ratio-bar">
+      <div style="width:45%; background:linear-gradient(90deg, var(--cream), var(--pink), var(--cyan), var(--lavender), var(--mint));"></div>
+      <div style="width:35%; background:var(--white); border-right:1px solid var(--line); border-left:1px solid var(--line);"></div>
+      <div style="width:20%; background:var(--ink);"></div>
+    </div>
+    <div class="ratio-label">
+      <span>Holo gradient 45%</span><span>White 35%</span><span>Ink 20%</span>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Typography</div>
+    <h2 class="sec-title">one geometric sans, always lowercase for the brand voice.</h2>
+    <p class="sec-intro">Space Grotesk carries the brand — display, headlines, and the wordmark itself — always set in lowercase, matching the logo. Inter runs the supporting cast: body copy, UI, reports.</p>
+
+    <div class="type-row">
+      <div class="type-meta"><b>Space Grotesk</b>Display &amp; Headlines<br>Weight 600, always lowercase</div>
+      <div class="specimen-h1">get cited.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><b>Space Grotesk</b>Emphasis, taglines<br>Weight 500, lowercase — no italics</div>
+      <div class="specimen-h2">reach the zenith of AI visibility.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><b>Inter</b>Body copy<br>Weight 400, 16–17px, 1.5 line-height</div>
+      <div class="specimen-body">Most businesses have no idea whether ChatGPT, Gemini, or Google's AI Overviews recommend them — or a competitor instead. We find out, fix it, and prove it every month.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><b>Inter</b>UI / Labels<br>Weight 600, 13px, sentence case — never all-caps</div>
+      <div class="specimen-ui">Book your free visibility snapshot</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Mark</div>
+    <h2 class="sec-title">a single mark, standing for the peak itself.</h2>
+    <p class="sec-intro">The wordmark is set entirely in lowercase Space Grotesk, led by a small solid square — a single, quiet accent standing in for the summit. The square never changes shape and never gains a second element.</p>
+
+    <div class="logo-grid">
+      <div class="logo-card light">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="6" width="11" height="11" rx="2" fill="#14172B"/>
+          <text x="18" y="38" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="600" fill="#14172B">zenith</text>
+        </svg>
+      </div>
+      <div class="logo-card dark">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="6" width="11" height="11" rx="2" fill="#FFFFFF"/>
+          <text x="18" y="38" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="600" fill="#FFFFFF">zenith</text>
+        </svg>
+      </div>
+    </div>
+    <div class="clearspace">Minimum clearspace: the height of the square mark on all sides. Minimum size: 18px tall in digital use, 0.35in in print. On the holographic background, the mark always renders in solid Ink Indigo — never in a lighter color, and never with a gradient fill of its own.</div>
+
+    <div class="donts">
+      <div class="dont-card"><div class="x">DON'T</div><p>Capitalize the wordmark. It is always lowercase "zenith," including at the start of a sentence in headlines.</p></div>
+      <div class="dont-card"><div class="x">DON'T</div><p>Fill the mark or wordmark with the holographic gradient — the gradient lives on backgrounds, not on the logo itself.</p></div>
+      <div class="dont-card"><div class="x">DON'T</div><p>Stretch, rotate, or round the square mark into a circle. It stays a fixed, upright square.</p></div>
+      <div class="dont-card"><div class="x">DON'T</div><p>Set the wordmark in anything but Space Grotesk — no substituting a system sans under deadline.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Voice</div>
+    <h2 class="sec-title">confident, evidence-first, never hypey.</h2>
+    <p class="sec-intro">The brand earns trust by showing proof, not by promising outcomes it can't guarantee. Every claim should be checkable.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <h3>show, don't sell</h3>
+        <p>Lead with a specific, checkable fact rather than a superlative.</p>
+        <div class="ex">"You weren't mentioned once across 12 AI answers this month."</div>
+      </div>
+      <div class="voice-card">
+        <h3>plain over technical</h3>
+        <p>Explain schema, citations, and AI mechanics the way you'd explain it to a smart neighbor.</p>
+        <div class="ex">"Think of this as teaching AI what your business actually does."</div>
+      </div>
+      <div class="voice-card">
+        <h3>steady, not salesy</h3>
+        <p>No urgency tactics, no exclamation points doing the persuading.</p>
+        <div class="ex">"Here's what changed this month, and here's what we're doing next."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLIED -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Applied</div>
+    <h2 class="sec-title">in the field.</h2>
+    <p class="sec-intro">Two quick references for how the identity holds up on small, everyday collateral.</p>
+
+    <div class="applied-grid">
+      <div class="card-mock holo">
+        <div class="mark-sq" style="margin-bottom:0;"></div>
+        <div>
+          <div class="nm">zenith</div>
+          <div class="role">AI Visibility Partnership</div>
+        </div>
+        <div class="contact">hello@zenith.ai &nbsp;·&nbsp; zenith.ai</div>
+      </div>
+      <div class="avatar-mock">
+        <div class="mark-sq" style="width:20px; height:20px;"></div>
+        <span>z</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-grid">
+      <div><b>colors</b>Holo gradient — dominant<br>Ink #14172B<br>Cream #FBF7EC</div>
+      <div><b>type</b>Space Grotesk — display, lowercase<br>Inter — body &amp; UI</div>
+      <div><b>mark</b>Solid square + lowercase wordmark<br>Never gradient-filled</div>
+      <div><b>voice</b>Evidence-first<br>Plain, steady, checkable</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

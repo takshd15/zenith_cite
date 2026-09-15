@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace {{CANONICAL_ORIGIN}} with the verified HTTPS origin, save as sitemap.xml, then add its absolute URL to robots.txt. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{CANONICAL_ORIGIN}}/</loc></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/ai-visibility-audit/</loc></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/generative-engine-optimisation/</loc></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/book/</loc></url>
+  <!-- Add /about/ and /insights/ only after their noindex directives are removed and their factual content is complete. -->
+</urlset>
