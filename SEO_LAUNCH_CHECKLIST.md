@@ -18,7 +18,7 @@
 4. Provide the verified business email, legal/trading name, operating location, and any required tax wording.
 5. Confirm the displayed currency and whether prices include or exclude applicable tax.
 6. Connect `/api/booking-request` to email delivery and test a complete request, Calendly booking, invitation, and rescheduling flow.
-7. Add accurate Organisation structured data only after the visible business details are verified.
+7. Organisation JSON-LD is on the homepage with name, `url`, `logo`, and description only (no invented email, address, or `sameAs`). Replace `{{CANONICAL_ORIGIN}}` when the domain is confirmed, and add `email`/`address`/`sameAs` only once those are verified.
 8. Supply a factual founder biography and a real photograph before removing `noindex` from `/about/`.
 9. Supply a real anonymised audit, report preview, named authors, dates, screenshots, and primary sources before removing `noindex` from `/insights/`.
 10. Add the completed About and Insights URLs to `sitemap.xml`.

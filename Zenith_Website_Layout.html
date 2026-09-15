@@ -134,11 +134,6 @@
     .related-link { display: inline-flex; align-items: center; gap: 10px; padding: 13px 16px; border: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; transition: background-color .2s ease, transform .2s ease; }
     .related-link:hover { transform: translateY(-2px); background: var(--white); }
 
-    .relationship { background: var(--ink); color: var(--white); }
-    .relationship-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); }
-    .relationship h2 { margin-bottom: 0; }
-    .relationship-copy { align-self: end; color: #c4c7d4; font-size: 17px; }
-    .relationship-copy p:last-child { margin-bottom: 0; }
 
     .faqs { background: var(--white); }
     .faq-layout { display: grid; grid-template-columns: .62fr 1.38fr; gap: clamp(60px, 10vw, 150px); }
@@ -180,7 +175,7 @@
       .step { grid-template-columns: 62px 1fr; }
       .step-copy { grid-column: 2; }
       .deliverable-grid { grid-template-columns: 1fr 1fr; }
-      .fit-card, .relationship-grid { grid-template-columns: 1fr; }
+      .fit-card { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .plan { min-height: auto; }
       .plan-description { min-height: auto; }
@@ -208,6 +203,18 @@
       .mobile-cta { min-height: 58px; display: flex; align-items: center; justify-content: center; position: fixed; z-index: 100; inset: auto 12px 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 3px; background: var(--ink); color: var(--white); box-shadow: 0 16px 40px rgba(20,23,43,.3); font-size: 13px; font-weight: 600; }
     }
   </style>
+  <!-- Before publishing: replace {{CANONICAL_ORIGIN}} with the verified HTTPS domain (see sitemap.template.xml),
+       and add "email", "address", and "sameAs" only once those are verified. Do not invent them. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zenith",
+    "url": "{{CANONICAL_ORIGIN}}/",
+    "logo": "{{CANONICAL_ORIGIN}}/zenith_logo.png",
+    "description": "AI visibility audits, generative engine optimisation, and ongoing measurement for businesses that depend on being discovered."
+  }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -224,10 +231,10 @@
         <div class="hero-copy">
           <p class="eyebrow">AI visibility agency</p>
           <h1 class="display">get found when your customers ask AI.</h1>
-          <p class="hero-lede">Zenith helps businesses improve their visibility across ChatGPT, Perplexity, Gemini, and Google’s AI search experiences.</p>
-          <p class="hero-detail">We identify where your brand appears, examine which competitors are being mentioned, and improve the website content and technical foundations that support discovery.</p>
+          <p class="hero-lede">Zenith helps your business get discovered and considered when potential customers ask ChatGPT, Google, and other AI platforms who to choose.</p>
+          <p class="hero-detail">Find out where competitors appear ahead of you, what’s holding your visibility back, and which website improvements to prioritise.</p>
           <div class="hero-actions"><a class="button" href="book/index.html" data-booking-cta="hero">Book your free visibility snapshot <span class="arrow">↗</span></a><a class="button secondary" href="#approach">Explore our approach <span class="arrow">↓</span></a></div>
-          <p class="snapshot-note">15 minutes. Three customer questions. A clearer picture of your visibility.</p>
+          <p class="snapshot-note">15 minutes. Three customer questions. See whether your business makes the shortlist.</p>
         </div>
         <div class="hero-art" aria-label="Zenith brand artwork"><div class="orbit" aria-hidden="true"></div><figure class="logo-panel"><span class="logo-lockup">zenith</span><figcaption class="signal-label">AI visibility audits · implementation · measurement</figcaption></figure></div>
       </section>
@@ -247,7 +254,8 @@
 
       <section class="section approach" id="approach">
         <p class="eyebrow">Our approach</p>
-        <h2 class="display section-title">a clear plan for AI visibility.</h2>
+        <h2 class="display section-title">help more potential customers discover and consider you.</h2>
+        <p class="intro">We document what we test, connect every recommendation to an observed gap, and explain limitations plainly so you can make the next decision with confidence.</p>
         <div class="steps">
           <article class="step"><span class="step-number">01</span><h3 class="display">understand your starting point</h3><div class="step-copy"><p>We test 15–20 relevant customer questions across four platforms and compare your visibility with named competitors.</p><p>You see the questions, the answers, the cited sources, and the gaps worth investigating.</p></div></article>
           <article class="step"><span class="step-number">02</span><h3 class="display">improve what customers and search systems find</h3><div class="step-copy"><p>We address agreed technical issues, clarify your business information, and improve content around the questions buyers need answered.</p><p>Every recommendation connects to a specific issue on your website or in your public business information.</p></div></article>
@@ -256,34 +264,30 @@
       </section>
 
       <section class="section deliverables" id="deliverables">
-        <p class="eyebrow">What you get</p><h2 class="display section-title">know what you’re paying for.</h2>
+        <p class="eyebrow">What you get</p><h2 class="display section-title">understand the gaps. know your next move.</h2>
         <div class="deliverable-grid">
           <article class="deliverable"><span class="deliverable-icon">01</span><h3>An evidence-backed visibility audit</h3><p>Review actual answers and screenshots, with the testing date and context recorded.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">02</span><h3>A competitor comparison</h3><p>Understand which businesses appear in the questions we test and which sources the answers reference.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">03</span><h3>Prioritised website improvements</h3><p>Receive a clear list of technical and content changes, ordered by their likely usefulness and implementation effort.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">04</span><h3>Content that answers buying questions</h3><p>Help prospective customers understand your services, compare their options, and decide whether your business fits their needs.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">05</span><h3>Monthly reporting</h3><p>See completed work, changes in the tested answers, and the priorities for the next month.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">02</span><h3>See where competitors get considered ahead of you</h3><p>Understand which businesses appear in the questions we test and which sources the answers reference.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">03</span><h3>Focus your effort on the changes that matter</h3><p>Receive a clear list of technical and content changes, ordered by their likely usefulness and implementation effort.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">04</span><h3>Help buyers understand why you’re a fit</h3><p>Help prospective customers understand your services, compare their options, and decide whether your business fits their needs.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">05</span><h3>See what changed—and what to do next</h3><p>See completed work, changes in the tested answers, and the priorities for the next month.</p></article>
           <article class="deliverable"><span class="deliverable-icon">06</span><h3>Direct communication</h3><p>Work directly with the people responsible for your strategy and implementation.</p></article>
         </div>
       </section>
 
       <section class="section fit" id="about">
-        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">built for businesses that depend on being discovered.</h2></div><div class="fit-copy"><p>Zenith works with founders and marketing teams who want to understand how their business appears in AI-assisted research.</p><p>Whether customers are comparing providers, exploring a service, or looking for specialist expertise, we help you make your business easier to understand and evaluate.</p><p>The best starting point is an established website, a clear offer, and the ability to implement improvements.</p><a class="button" href="book/index.html" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
+        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">built for businesses that depend on being discovered.</h2></div><div class="fit-copy"><p>Zenith works with founders and marketing teams whose customers compare providers, explore specialist services, or research who to trust.</p><p>The best starting point is an established website, a clear offer, and the ability to implement improvements.</p><a class="button" href="book/index.html" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
       </section>
 
       <section class="section pricing" id="pricing">
         <p class="eyebrow">Pricing</p><h2 class="display section-title">start with clarity. build from there.</h2>
         <div class="pricing-grid">
-          <article class="plan"><h3 class="plan-name">Visibility Audit</h3><p class="plan-price">$750 · one-time</p><p class="plan-description">Understand your current visibility and the opportunities worth pursuing.</p><ul><li>15–20 customer questions tested across four platforms</li><li>Comparison with named competitors</li><li>Dated examples and screenshots</li><li>Prioritised recommendations</li><li>Delivery within 48–72 hours after we receive the required information</li></ul><a class="button" href="book/index.html?interest=visibility-audit" data-booking-cta="pricing" data-interest="visibility-audit">Discuss your audit <span class="arrow">↗</span></a></article>
-          <article class="plan featured"><h3 class="plan-name">Growth</h3><p class="plan-price">$1,500 / month</p><p class="plan-description">For businesses ready to put the recommendations into practice.</p><ul><li>Initial visibility audit</li><li>Agreed schema and technical improvements</li><li>Two optimised content pieces per month</li><li>Monthly visibility re-audit</li><li>Clear progress reporting</li></ul><a class="button" href="book/index.html?interest=growth" data-booking-cta="pricing" data-interest="growth">Discuss Growth <span class="arrow">↗</span></a></article>
-          <article class="plan"><h3 class="plan-name">Authority</h3><p class="plan-price">$2,800 / month</p><p class="plan-description">For businesses ready to expand their content and external visibility.</p><ul><li>Everything in Growth</li><li>Four or more content pieces per month, scoped in advance</li><li>Outreach for relevant third-party mentions and digital PR opportunities</li><li>Priority support and strategy calls</li></ul><a class="button" href="book/index.html?interest=authority" data-booking-cta="pricing" data-interest="authority">Discuss Authority <span class="arrow">↗</span></a></article>
+          <article class="plan"><h3 class="plan-name">Audit — Know where you stand.</h3><p class="plan-price">$750 · one-time</p><p class="plan-description">Understand your visibility gaps and leave with a prioritised action plan.</p><ul><li>15–20 customer questions tested across four platforms</li><li>Comparison with named competitors</li><li>Dated examples and screenshots</li><li>Prioritised recommendations</li><li>Delivery within 48–72 hours after we receive the required information</li></ul><a class="button" href="book/index.html?interest=visibility-audit" data-booking-cta="pricing" data-interest="visibility-audit">Discuss your audit <span class="arrow">↗</span></a></article>
+          <article class="plan featured"><h3 class="plan-name">Growth — Put the plan into action.</h3><p class="plan-price">$1,500 / month</p><p class="plan-description">Improve your website and content so potential customers can find and evaluate your business.</p><ul><li>Initial visibility audit</li><li>Agreed schema and technical improvements</li><li>Two optimised content pieces per month</li><li>Monthly visibility re-audit</li><li>Clear progress reporting</li></ul><a class="button" href="book/index.html?interest=growth" data-booking-cta="pricing" data-interest="growth">Discuss Growth <span class="arrow">↗</span></a></article>
+          <article class="plan"><h3 class="plan-name">Authority — Expand your presence.</h3><p class="plan-price">$2,800 / month</p><p class="plan-description">Cover more buying questions and pursue relevant third-party mentions.</p><ul><li>Everything in Growth</li><li>Four or more content pieces per month, scoped in advance</li><li>Outreach for relevant third-party mentions and digital PR opportunities</li><li>Priority support and strategy calls</li></ul><a class="button" href="book/index.html?interest=authority" data-booking-cta="pricing" data-interest="authority">Discuss Authority <span class="arrow">↗</span></a></article>
         </div>
         <p class="scope-note">We agree on the scope before work begins. Search rankings, AI recommendations, and third-party placements are not guaranteed.</p>
         <nav class="related-links" aria-label="Related services"><a class="related-link" href="ai-visibility-audit/index.html">Explore the AI visibility audit <span>↗</span></a><a class="related-link" href="generative-engine-optimisation/index.html">Explore GEO services <span>↗</span></a></nav>
-      </section>
-
-      <section class="section relationship dark-section">
-        <div class="relationship-grid"><div><p class="eyebrow">How we work</p><h2 class="display section-title">a closer working relationship.</h2></div><div class="relationship-copy"><p>Zenith combines technical implementation with careful research and clear communication.</p><p>You can see what we tested, understand why a change was recommended, and review what was delivered.</p><p>Our job is to make your next decision clearer—and carry out the work we agree on.</p></div></div>
       </section>
 
       <section class="section faqs" id="faqs">
@@ -304,7 +308,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-top"><div class="footer-brand"><a class="logo-lockup" href="#top">zenith</a><p>AI visibility audits, implementation, and ongoing measurement.</p></div><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#approach">Our approach</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="book/index.html">Contact</a></div><div><a href="ai-visibility-audit/index.html">AI visibility audit</a><a href="generative-engine-optimisation/index.html">GEO services</a><a href="#">Privacy</a><a href="#">Terms</a></div></nav></div>
+      <div class="footer-top"><div class="footer-brand"><a class="logo-lockup" href="#top">zenith</a><p>AI visibility audits, implementation, and ongoing measurement.</p></div><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#approach">Our approach</a><a href="#pricing">Pricing</a><a href="about/index.html">About</a><a href="book/index.html">Contact</a></div><div><a href="ai-visibility-audit/index.html">AI visibility audit</a><a href="generative-engine-optimisation/index.html">GEO services</a><a href="privacy/index.html">Privacy</a><a href="terms/index.html">Terms</a></div></nav></div>
       <div class="footer-bottom"><span>© Zenith 2026</span></div>
     </footer>
   </div>

@@ -35,13 +35,7 @@
     .logo::before { content:""; width: 9px; height: 9px; border-radius: 1px; background: currentColor; transform: translateY(-7px); }
     .back { color: var(--graphite); font-size: 13px; font-weight: 600; }
     .back:hover { color: var(--ink); }
-    .hero { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(55px, 9vw, 130px); padding: clamp(78px, 10vw, 135px) var(--pad) clamp(70px, 8vw, 110px); background: radial-gradient(70% 110% at 0% 0%, rgba(95,224,224,.6), transparent 62%), radial-gradient(65% 100% at 100% 10%, rgba(242,168,224,.52), transparent 66%), radial-gradient(70% 90% at 55% 100%, rgba(184,240,216,.58), transparent 70%), radial-gradient(70% 90% at 55% 0%, rgba(201,182,242,.52), transparent 70%), var(--cream); }
     .eyebrow { margin: 0 0 22px; color: var(--graphite); font-size: 12px; font-weight: 600; }
-    h1 { max-width: 720px; margin: 0 0 30px; font: 600 clamp(52px, 6.5vw, 88px)/.98 "Space Grotesk", sans-serif; letter-spacing: -.055em; text-transform: lowercase; }
-    .hero-copy > p:not(.eyebrow) { max-width: 650px; color: var(--graphite); font-size: 17px; }
-    .snapshot-meta { align-self: end; padding: 30px; border: 1px solid var(--line); background: rgba(255,255,255,.48); }
-    .snapshot-meta strong { display: block; margin-bottom: 9px; font: 600 25px "Space Grotesk", sans-serif; letter-spacing: -.035em; }
-    .snapshot-meta p { margin: 0; color: var(--graphite); font-size: 13px; }
 
     .booking { padding: clamp(76px, 9vw, 125px) var(--pad); background: var(--white); }
     .booking-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(45px, 7vw, 95px); align-items: start; }
@@ -86,15 +80,12 @@
     footer .logo { color: var(--white); }
 
     @media (max-width: 900px) {
-      .hero, .booking-grid { grid-template-columns: 1fr; }
+      .booking-grid { grid-template-columns: 1fr; }
       .booking-grid { gap: 55px; }
       .after-booking { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       .nav { height: 72px; }
-      .hero { padding-top: 72px; }
-      h1 { font-size: clamp(47px, 14vw, 68px); }
-      .snapshot-meta { padding: 24px; }
       .booking { padding-inline: 18px; }
       .next-panel, .request-confirmed { min-height: 440px; }
       footer { flex-direction: column; }
@@ -106,17 +97,6 @@
   <div class="page">
     <header><nav class="nav" aria-label="Booking navigation"><a class="logo" href="../Zenith_Website_Layout.html">zenith</a><a class="back" href="../Zenith_Website_Layout.html">← Back to website</a></nav></header>
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Free AI visibility snapshot</p>
-          <h1>book your free AI visibility snapshot.</h1>
-          <p>In 15 minutes, we’ll explore three questions a potential customer might ask about your services and review what appears in ChatGPT and Google.</p>
-          <p>You’ll leave with a clearer understanding of your starting point and whether a full audit makes sense.</p>
-          <p>Please share your website before the call so we can make the conversation useful.</p>
-        </div>
-        <aside class="snapshot-meta"><strong>Request your booking link</strong><p>Free · 15 minutes · Video call</p></aside>
-      </section>
-
       <section class="booking" id="request-link">
         <div class="booking-grid">
           <div class="details-panel" id="form-panel">
@@ -135,7 +115,7 @@
               <input id="timezone-field" name="timezone" type="hidden">
               <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
               <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
-              <p class="privacy-note">We’ll use these details to prepare for the snapshot and send the Calendly booking link to your email.</p>
+              <p class="privacy-note">We’ll use these details to prepare for the snapshot and send the Calendly booking link to your email. Read the <a href="../privacy/index.html">privacy policy</a>.</p>
             </form>
           </div>
 
@@ -201,17 +181,14 @@
         submitButton.textContent = 'Sending request…';
 
         try {
-          /* Set window.ZENITH_BOOKING_ENDPOINT to the live email/API endpoint when the backend is ready. */
-          if (window.ZENITH_BOOKING_ENDPOINT) {
-            var response = await fetch(window.ZENITH_BOOKING_ENDPOINT, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-            });
-            if (!response.ok) throw new Error('Request failed');
-          } else {
-            /* Frontend preview only: simulate a successful request without transmitting form data. */
-            await new Promise(function (resolve) { window.setTimeout(resolve, 650); });
+          var response = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) {
+            var result = await response.json().catch(function () { return {}; });
+            throw new Error(result.error || 'Request failed');
           }
 
           window.dataLayer.push({
@@ -225,7 +202,7 @@
           document.getElementById('request-confirmed').classList.add('visible');
           document.getElementById('request-confirmed').scrollIntoView({ behavior: 'smooth', block: 'center' });
         } catch (error) {
-          formStatus.textContent = 'We could not send your request. Please try again.';
+          formStatus.textContent = error.message || 'We could not send your request. Please try again.';
           submitButton.disabled = false;
           submitButton.innerHTML = originalButtonText;
         }
