@@ -14,6 +14,16 @@ The booking endpoint saves validated requests to PostgreSQL. Sending the Calendl
 
 ## Deploy to Vercel
 
+### Web Analytics
+
+Public pages include Vercel's plain HTML Web Analytics snippet. This project does not use React or Next.js, so no Analytics component or npm package is needed.
+
+Enable **Web Analytics** for the project in the Vercel dashboard, then deploy the changes. Visit the deployed site and navigate between pages; check the Analytics dashboard after about 30 seconds. If no data appears, check content blockers and confirm `/_vercel/insights/script.js` loads successfully. The tracking endpoint is provided by Vercel and is not available from the local Express server.
+
+See the [Vercel Web Analytics quickstart](https://vercel.com/docs/analytics/quickstart) for details.
+
+### Deployment steps
+
 1. Push this repository to GitHub and import it into Vercel.
 2. Leave the Framework Preset as **Other**. The included `vercel.json` supplies the routes and serverless-function settings.
 3. In **Project Settings → Environment Variables**, add `DATABASE_URL` for Production, Preview, and Development as appropriate. Use the Supabase pooler connection string and URL-encode reserved password characters.
