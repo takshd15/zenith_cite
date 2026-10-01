@@ -6,15 +6,10 @@
       "maxDuration": 10
     }
   },
-  "rewrites": [
-    { "source": "/", "destination": "/Zenith_Website_Layout.html" },
-    { "source": "/book", "destination": "/book/index.html" },
-    { "source": "/ai-visibility-audit", "destination": "/ai-visibility-audit/index.html" },
-    { "source": "/generative-engine-optimisation", "destination": "/generative-engine-optimisation/index.html" },
-    { "source": "/about", "destination": "/about/index.html" },
-    { "source": "/insights", "destination": "/insights/index.html" },
-    { "source": "/privacy", "destination": "/privacy/index.html" },
-    { "source": "/terms", "destination": "/terms/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/Zenith_Website_Layout.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {

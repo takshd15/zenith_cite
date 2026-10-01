@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add the absolute Sitemap URL after the production domain is verified.
+Sitemap: https://zenith-cite.com/sitemap.xml

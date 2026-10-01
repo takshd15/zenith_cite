@@ -23,7 +23,7 @@ a { color: inherit; text-decoration: none; }
 p, h1, h2, h3 { margin-top: 0; }
 .page { width: min(100%, 1320px); margin-inline: auto; overflow: hidden; background: var(--cream); }
 .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-inline: var(--pad); border-bottom: 1px solid var(--line); }
-.logo { display: inline-flex; align-items: center; gap: 7px; font: 600 22px/1 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+.logo { display: inline-flex; flex-shrink: 0; align-items: center; gap: 7px; font: 600 22px/1 "Space Grotesk", sans-serif; letter-spacing: -.045em; white-space: nowrap; }
 .logo::before { content:""; width: 9px; height: 9px; border-radius: 1px; background: currentColor; transform: translateY(-7px); }
 .nav-links { display: flex; align-items: center; gap: 24px; color: var(--graphite); font-size: 12px; font-weight: 600; }
 .nav-links a:hover { color: var(--ink); }
@@ -39,6 +39,9 @@ h1 { max-width: 790px; margin-bottom: 30px; font-size: clamp(53px, 7vw, 92px); l
 .hero-aside strong { display:block; margin-bottom: 8px; font: 600 24px "Space Grotesk",sans-serif; letter-spacing:-.04em; }
 .hero-aside p { margin: 0; color: var(--graphite); font-size: 13px; }
 .section { padding: var(--section) var(--pad); }
+.founder-portrait { margin: 0; max-width: 286px; }
+.founder-portrait img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.founder-portrait figcaption { margin-top: 12px; color: var(--graphite); font-size: 12px; }
 .white { background: var(--white); }
 .dark { background: var(--ink); color: var(--white); }
 .dark .eyebrow { color: var(--lavender); }
@@ -98,7 +101,8 @@ footer { display:grid; grid-template-columns:1fr auto; gap:35px; padding:55px va
 }
 @media (max-width: 560px) {
   .nav { min-height:72px; padding-inline: 18px; gap: 14px; }
-  .nav-links .button { min-height:40px; padding:0 14px; font-size:12px; }
+  .nav .logo { font-size:20px; }
+  .nav-links .button { min-height:40px; padding:0 10px; gap:8px; font-size:11px; white-space:nowrap; }
   h1 { font-size:clamp(46px,14vw,66px); }
   .hero { padding-top:72px; }
   .proof-fields { grid-template-columns:1fr; }

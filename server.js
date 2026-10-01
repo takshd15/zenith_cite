@@ -24,15 +24,33 @@ function sendPage(relativePath) {
   return (_request, response) => response.sendFile(path.join(root, relativePath));
 }
 
+// Mirror Vercel's clean URLs locally, including query strings on redirects.
+function registerPage(canonicalPath, relativePath, aliases) {
+  const send = sendPage(relativePath);
+  app.get([canonicalPath, ...aliases], (request, response) => {
+    if (request.path !== canonicalPath) {
+      const queryStart = request.originalUrl.indexOf('?');
+      const query = queryStart === -1 ? '' : request.originalUrl.slice(queryStart);
+      return response.redirect(308, canonicalPath + query);
+    }
+    return send(request, response);
+  });
+}
+
 app.use('/assets', express.static(path.join(root, 'assets'), { index: false }));
-app.get(['/', '/Zenith_Website_Layout.html'], sendPage('Zenith_Website_Layout.html'));
-app.get(['/book', '/book/', '/book/index.html'], sendPage('book/index.html'));
-app.get(['/ai-visibility-audit', '/ai-visibility-audit/', '/ai-visibility-audit/index.html'], sendPage('ai-visibility-audit/index.html'));
-app.get(['/generative-engine-optimisation', '/generative-engine-optimisation/', '/generative-engine-optimisation/index.html'], sendPage('generative-engine-optimisation/index.html'));
-app.get(['/about', '/about/', '/about/index.html'], sendPage('about/index.html'));
-app.get(['/insights', '/insights/', '/insights/index.html'], sendPage('insights/index.html'));
-app.get(['/privacy', '/privacy/', '/privacy/index.html'], sendPage('privacy/index.html'));
-app.get(['/terms', '/terms/', '/terms/index.html'], sendPage('terms/index.html'));
+registerPage('/', 'index.html', ['/index', '/index.html', '/Zenith_Website_Layout.html']);
+for (const page of [
+  'book', 'ai-visibility-audit', 'generative-engine-optimisation', 'about', 'insights', 'privacy', 'terms',
+  'insights/check-business-in-chatgpt',
+  'insights/what-an-ai-visibility-audit-includes',
+  'insights/geo-and-seo-measurement',
+  'insights/why-chatgpt-recommends-your-competitor'
+]) {
+  registerPage(`/${page}/`, `${page}/index.html`, [`/${page}`, `/${page}/index`, `/${page}/index.html`]);
+}
+app.get('/robots.txt', sendPage('robots.txt'));
+app.get('/sitemap.xml', sendPage('sitemap.xml'));
+app.get('/llms.txt', sendPage('llms.txt'));
 app.get('/zenith_logo.png', sendPage('zenith_logo.png'));
 app.get('/zenith-social-share.png', sendPage('zenith-social-share.png'));
 

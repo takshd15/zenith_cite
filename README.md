@@ -10,6 +10,15 @@
 
 Never place the database password in HTML or client-side JavaScript. Configure `DATABASE_URL` as a secret environment variable in the production hosting platform.
 
+Run `npm run test:seo` after editing the FAQ, services, founder information,
+Insights articles or indexing directives. It checks structured data against
+visible content, article lengths and attribution, internal links and anchors,
+social metadata, tax-inclusive EUR prices, sitemap entries and `llms.txt` links.
+The local server also serves `/llms.txt` and the four nested article routes.
+See [SEO_CONTENT_PLAN.md](SEO_CONTENT_PLAN.md) for the launch articles, future
+niche briefs and the publishing checklist. Static HTML is the source of truth;
+there is no article build step.
+
 The booking endpoint saves validated requests to PostgreSQL. Sending the Calendly link by email still requires a transactional email provider or SMTP configuration; do not claim automatic email delivery until that integration is configured and tested.
 
 ## Deploy to Vercel

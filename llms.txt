@@ -1,0 +1,37 @@
+# Zenith Cite
+
+> Zenith Cite provides AI visibility audits, generative engine optimisation (GEO), and ongoing measurement for businesses that depend on being discovered.
+
+Zenith Cite helps founders and marketing teams understand how their businesses appear in AI-generated answers. The work combines documented testing, competitor comparisons, technical website improvements, and useful content. Brand mentions, recommendations, and website links are measured separately.
+
+## Services and published pricing
+
+- [Free AI visibility snapshot](https://zenith-cite.com/book/): A free 15-minute initial review exploring three relevant customer questions in ChatGPT and Google, with a discussion of whether a full audit would be useful.
+- [AI visibility audit](https://zenith-cite.com/ai-visibility-audit/): €750 one-time. Tests 15–20 customer questions across ChatGPT, Perplexity, Gemini, and Google's AI search experiences. Includes dated evidence, named competitor comparisons, and prioritised recommendations. Delivery is within 48–72 hours after the required information is received.
+- [Growth and Authority GEO services](https://zenith-cite.com/generative-engine-optimisation/): Growth is €1,500 per month and includes an initial audit, agreed technical and content work, two optimised content pieces per month, and monthly measurement. Authority is €2,800 per month and includes Growth, four or more content pieces scoped in advance, relevant third-party outreach, priority support, and strategy calls.
+
+All prices are in euros and include taxes. Scope is agreed before work begins. Search rankings, AI recommendations, third-party placements, traffic, and commercial outcomes are not guaranteed.
+
+## Contact and key pages
+
+Zenith Cite was founded by Taksh Dange. His work focuses on technical implementation, AI visibility research, and documented measurement.
+
+- [Taksh Dange on LinkedIn](https://www.linkedin.com/in/taksh-dange-b98081273/): Professional profile and background.
+- [Email Taksh Dange](mailto:takshdange@gmail.com): Direct business enquiries.
+- [Zenith Cite homepage](https://zenith-cite.com/): Overview, approach, services, and pricing.
+- [AI visibility FAQ](https://zenith-cite.com/#faqs): Definitions, scope, limitations, timescales, and the free snapshot.
+- [Contact and booking](https://zenith-cite.com/book/): Submit business details to request the free snapshot or discuss services.
+- [About Taksh Dange and Zenith Cite](https://zenith-cite.com/about/): Founder biography, portrait, professional profile and direct contact.
+
+## Practical guides
+
+- [AI visibility and GEO insights](https://zenith-cite.com/insights/): Guides by Taksh Dange with primary sources and explicitly labelled illustrative examples.
+- [Check your business in ChatGPT](https://zenith-cite.com/insights/check-business-in-chatgpt/): Build a repeatable question set and separate mentions, recommendations, citations and accuracy.
+- [What an AI visibility audit includes](https://zenith-cite.com/insights/what-an-ai-visibility-audit-includes/): Scope, baseline evidence, technical review, competitor comparison and handover.
+- [GEO and SEO measurement](https://zenith-cite.com/insights/geo-and-seo-measurement/): Shared website improvements and separate measures for search, answers and business outcomes.
+- [Why ChatGPT recommends your competitor](https://zenith-cite.com/insights/why-chatgpt-recommends-your-competitor/): Investigate repeated observations, sources, access and public information gaps.
+
+## Policies
+
+- [Privacy policy](https://zenith-cite.com/privacy/): How information submitted through the website and booking form is handled.
+- [Website terms](https://zenith-cite.com/terms/): Conditions for using the website and requesting services.

@@ -6,6 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "test:seo": "node scripts/verify-seo.js",
     "db:migrate": "node scripts/migrate.js"
   },
   "engines": {

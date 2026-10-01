@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace {{CANONICAL_ORIGIN}} with the verified HTTPS origin, save as sitemap.xml, then add its absolute URL to robots.txt. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>{{CANONICAL_ORIGIN}}/</loc></url>
-  <url><loc>{{CANONICAL_ORIGIN}}/ai-visibility-audit/</loc></url>
-  <url><loc>{{CANONICAL_ORIGIN}}/generative-engine-optimisation/</loc></url>
-  <url><loc>{{CANONICAL_ORIGIN}}/book/</loc></url>
-  <url><loc>{{CANONICAL_ORIGIN}}/privacy/</loc></url>
-  <url><loc>{{CANONICAL_ORIGIN}}/terms/</loc></url>
-  <!-- Add /about/ and /insights/ only after their noindex directives are removed and their factual content is complete. -->
+  <url><loc>{{CANONICAL_ORIGIN}}/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/ai-visibility-audit/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/generative-engine-optimisation/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/book/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/about/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/insights/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/insights/check-business-in-chatgpt/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/insights/what-an-ai-visibility-audit-includes/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/insights/geo-and-seo-measurement/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/insights/why-chatgpt-recommends-your-competitor/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/privacy/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>{{CANONICAL_ORIGIN}}/terms/</loc><lastmod>2026-10-01</lastmod></url>
 </urlset>
