@@ -50,6 +50,7 @@ for (const page of [
 }
 app.get('/robots.txt', sendPage('robots.txt'));
 app.get('/sitemap.xml', sendPage('sitemap.xml'));
+app.get('/BingSiteAuth.xml', sendPage('BingSiteAuth.xml'));
 app.get('/llms.txt', sendPage('llms.txt'));
 app.get('/zenith_logo.png', sendPage('zenith_logo.png'));
 app.get('/zenith-social-share.png', sendPage('zenith-social-share.png'));
