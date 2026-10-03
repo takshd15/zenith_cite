@@ -29,6 +29,7 @@ p, h1, h2, h3 { margin-top: 0; }
 .nav-links a:hover { color: var(--ink); }
 .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 19px; border: 1px solid var(--ink); border-radius: 2px; background: var(--ink); color: var(--white); font-size: 13px; font-weight: 600; transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out); }
 .button:hover { transform: translateY(-2px); background: var(--ink-soft); }
+button.button { font-family: inherit; cursor: pointer; }
 .button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
 .hero { display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(50px, 8vw, 120px); align-items: end; padding: clamp(82px, 10vw, 140px) var(--pad); background: radial-gradient(72% 120% at 0% 0%, rgba(95,224,224,.62), transparent 62%), radial-gradient(60% 100% at 100% 10%, rgba(242,168,224,.5), transparent 68%), radial-gradient(80% 90% at 55% 110%, rgba(184,240,216,.62), transparent 70%), radial-gradient(70% 90% at 58% -15%, rgba(201,182,242,.48), transparent 70%), var(--cream); }
 .eyebrow { margin-bottom: 20px; color: var(--graphite); font-size: 11px; font-weight: 600; }
