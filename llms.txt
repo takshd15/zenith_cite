@@ -9,6 +9,10 @@ Zenith Cite helps founders and marketing teams understand how their businesses a
 - [Free AI visibility snapshot](https://zenith-cite.com/book/): A free 15-minute initial review exploring three relevant customer questions in ChatGPT and Google, with a discussion of whether a full audit would be useful.
 - [AI visibility audit](https://zenith-cite.com/ai-visibility-audit/): €750 one-time. Tests 15–20 customer questions across ChatGPT, Perplexity, Gemini, and Google's AI search experiences. Includes dated evidence, named competitor comparisons, and prioritised recommendations. Delivery is within 48–72 hours after the required information is received.
 - [Growth and Authority GEO services](https://zenith-cite.com/generative-engine-optimisation/): Growth is €1,500 per month and includes an initial audit, agreed technical and content work, two optimised content pieces per month, and monthly measurement. Authority is €2,800 per month and includes Growth, four or more content pieces scoped in advance, relevant third-party outreach, priority support, and strategy calls.
+- [AI SEO](https://zenith-cite.com/ai-seo/): How AI search optimization builds on traditional SEO, and how AI answers are tested and measured.
+- [AI findability](https://zenith-cite.com/ai-findability/): Whether AI search engines can reach, understand and accurately describe a business.
+- [Visibility in ChatGPT](https://zenith-cite.com/chatgpt-visibility/): How ChatGPT finds businesses and how Zenith improves ChatGPT findability.
+- [Perplexity optimization](https://zenith-cite.com/perplexity-optimization/): Crawler access, citation mapping and content improvements for Perplexity answers.
 
 All prices are in euros and include taxes. Scope is agreed before work begins. Search rankings, AI recommendations, third-party placements, traffic, and commercial outcomes are not guaranteed.
 

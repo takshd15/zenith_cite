@@ -63,7 +63,7 @@
     .page { width: min(100%, var(--page)); margin-inline: auto; overflow: hidden; background: var(--cream); }
     .shell { padding-inline: var(--pad); }
     .section { padding: var(--section) var(--pad); }
-    .display { font-family: "DM Sans", Inter, sans-serif; font-weight: 600; letter-spacing: -.055em; line-height: .98; text-transform: lowercase; }
+    .display { font-family: "DM Sans", Inter, sans-serif; font-weight: 600; letter-spacing: -.035em; line-height: 1; text-transform: lowercase; }
     .eyebrow { margin-bottom: 24px; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .02em; }
     .section-title { max-width: 760px; margin-bottom: 28px; font-size: clamp(42px, 5.2vw, 72px); }
     .intro { max-width: 660px; color: var(--graphite); font-size: clamp(17px, 1.55vw, 21px); }
@@ -105,6 +105,9 @@
     .platform { min-height: 88px; display: flex; align-items: center; gap: 16px; padding: 0 24px; border: 1px solid rgba(255,255,255,.8); border-radius: 10px; background: rgba(255,255,255,.82); color: var(--ink); font: 500 18px/1.2 "DM Sans", sans-serif; box-shadow: -16px -8px 0 -3px rgba(255,255,255,.4), -32px -16px 0 -6px rgba(255,255,255,.25), 0 24px 48px rgba(20,23,43,.1); backdrop-filter: blur(10px); }
     .platform svg { width: 34px; height: 34px; flex: none; }
 
+    .what-we-do { background: var(--cream); }
+    .what-we-do h2 { margin-bottom: 28px; }
+    .what-we-do p:not(.eyebrow) { max-width: 680px; color: var(--graphite); font-size: clamp(16px, 1.3vw, 18px); }
     .problem { background: var(--white); }
     .editorial-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(60px, 10vw, 150px); align-items: start; }
     .problem-copy h2 { margin-bottom: 34px; }
@@ -345,6 +348,18 @@
         </div>
       </section>
 
+      <section class="section what-we-do" id="what-we-do">
+        <div class="editorial-grid">
+          <p class="eyebrow">AI search engine optimization</p>
+          <div>
+            <h2 class="display section-title">An AI visibility agency for the answers your customers read</h2>
+            <p>Zenith Cite helps businesses improve their AI visibility. When people ask ChatGPT, Perplexity, Gemini or Google AI Overviews who to choose, those answers increasingly decide which companies make the shortlist. We help make sure yours is one of them.</p>
+            <p>Our work is AI search engine optimization, also called generative engine optimisation (GEO). We test the questions your buyers actually ask, find where competitors are cited ahead of you, and fix the website and content gaps that keep you out of the answer.</p>
+            <p>If you are looking for a geo bureau, this is what we do, with dated evidence, clear priorities and honest reporting instead of guaranteed rankings.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section problem">
         <div class="editorial-grid">
           <p class="eyebrow">The question</p>
@@ -360,7 +375,7 @@
 
       <section class="section approach" id="approach">
         <p class="eyebrow">Our approach</p>
-        <h2 class="display section-title">How GEO helps customers find you in AI search</h2>
+        <h2 class="display section-title">How our geo bureau helps customers find you in AI search</h2>
         <p class="intro">We document what we test, connect every recommendation to an observed gap, and explain limitations plainly so you can make the next decision with confidence.</p>
         <div class="steps">
           <article class="step"><span class="step-number">01</span><h3 class="display">understand your starting point</h3><div class="step-copy"><p>We test 15–20 relevant customer questions across four platforms and compare your visibility with named competitors.</p><p>You see the questions, the answers, the cited sources, and the gaps worth investigating.</p></div></article>
@@ -386,7 +401,7 @@
       </section>
 
       <section class="section pricing" id="pricing">
-        <p class="eyebrow">Pricing</p><h2 class="display section-title">Pricing: audit, growth and authority plans</h2>
+        <p class="eyebrow">Pricing</p><h2 class="display section-title">AI search engine optimization plans and pricing</h2>
         <div class="pricing-grid">
           <article class="plan"><h3 class="plan-name">Audit — Know where you stand.</h3><p class="plan-price">€750 · one-time</p><p class="plan-description">Understand your visibility gaps and leave with a prioritised action plan.</p><ul><li>15–20 customer questions tested across four platforms</li><li>Comparison with named competitors</li><li>Dated examples and screenshots</li><li>Prioritised recommendations</li><li>Delivery within 48–72 hours after we receive the required information</li></ul><a class="button" href="/book/?interest=visibility-audit" data-booking-cta="pricing" data-interest="visibility-audit">Discuss your audit <span class="arrow">↗</span></a></article>
           <article class="plan featured"><h3 class="plan-name">Growth — Put the plan into action.</h3><p class="plan-price">€1,500 / month</p><p class="plan-description">Improve your website and content so potential customers can find and evaluate your business.</p><ul><li>Initial visibility audit</li><li>Agreed schema and technical improvements</li><li>Two optimised content pieces per month</li><li>Monthly visibility re-audit</li><li>Clear progress reporting</li></ul><a class="button" href="/book/?interest=growth" data-booking-cta="pricing" data-interest="growth">Discuss Growth <span class="arrow">↗</span></a></article>
@@ -414,7 +429,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-top"><div class="footer-brand"><a class="logo-lockup" href="#top">zenith cite</a><p>AI visibility audits, implementation, and ongoing measurement.</p><p class="footer-email"><a href="mailto:takshdange@gmail.com">takshdange@gmail.com</a></p></div><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#approach">Our approach</a><a href="#pricing">Pricing</a><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/book/">Contact</a></div><div><a href="/ai-visibility-audit/">AI visibility audit</a><a href="/generative-engine-optimisation/">GEO services</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#" data-cookie-settings>Cookie settings</a></div></nav></div>
+      <div class="footer-top"><div class="footer-brand"><a class="logo-lockup" href="#top">zenith cite</a><p>AI visibility audits, implementation, and ongoing measurement.</p><p class="footer-email"><a href="mailto:takshdange@gmail.com">takshdange@gmail.com</a></p></div><nav class="footer-nav" aria-label="Footer navigation"><div><a href="#approach">Our approach</a><a href="#pricing">Pricing</a><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/book/">Contact</a></div><div><a href="/ai-visibility-audit/">AI visibility audit</a><a href="/generative-engine-optimisation/">GEO services</a><a href="/ai-seo/">AI SEO</a><a href="/ai-findability/">AI findability</a><a href="/chatgpt-visibility/">Visibility in ChatGPT</a><a href="/perplexity-optimization/">Perplexity optimization</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#" data-cookie-settings>Cookie settings</a></div></nav></div>
       <div class="footer-bottom"><span>© Zenith Cite 2026</span></div>
     </footer>
   </div>

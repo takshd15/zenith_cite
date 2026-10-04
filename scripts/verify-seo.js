@@ -9,7 +9,7 @@ const origin = 'https://zenith-cite.com';
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const normalise = text => text.replace(/\s+/g, ' ').trim();
 const schemas = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
-const routes = ['/', '/book/', '/ai-visibility-audit/', '/generative-engine-optimisation/', '/about/', '/insights/', '/privacy/', '/terms/'];
+const routes = ['/', '/book/', '/ai-visibility-audit/', '/generative-engine-optimisation/', '/about/', '/insights/', '/privacy/', '/terms/', '/ai-seo/', '/ai-findability/', '/chatgpt-visibility/', '/perplexity-optimization/'];
 const articleRoutes = fs.readdirSync(path.join(root, 'insights'), { withFileTypes: true })
   .filter(entry => entry.isDirectory() && fs.existsSync(path.join(root, 'insights', entry.name, 'index.html')))
   .map(entry => `/insights/${entry.name}/`);
