@@ -9,7 +9,7 @@ const origin = 'https://zenith-cite.com';
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const normalise = text => text.replace(/\s+/g, ' ').trim();
 const schemas = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
-const routes = ['/', '/book/', '/ai-visibility-audit/', '/generative-engine-optimisation/', '/about/', '/insights/', '/privacy/', '/terms/', '/ai-seo/', '/ai-findability/', '/chatgpt-visibility/', '/perplexity-optimization/'];
+const routes = ['/', '/book/', '/ai-visibility-audit/', '/generative-engine-optimisation/', '/about/', '/insights/', '/privacy/', '/terms/', '/ai-seo/', '/ai-findability/', '/chatgpt-visibility/', '/perplexity-optimization/', '/nl/geo-diensten/', '/nl/ai-zichtbaarheid-audit/', '/nl/ai-zoekoptimalisatie/', '/nl/ai-vindbaarheid/', '/nl/chatgpt-vindbaarheid/'];
 const articleRoutes = fs.readdirSync(path.join(root, 'insights'), { withFileTypes: true })
   .filter(entry => entry.isDirectory() && fs.existsSync(path.join(root, 'insights', entry.name, 'index.html')))
   .map(entry => `/insights/${entry.name}/`);
@@ -26,7 +26,7 @@ for (const [route, html] of pages) {
   assert.ok(!/\$(?:750|1,500|2,800)/.test(html), `Old dollar prices: ${route}`);
   schemas(html); // Every JSON-LD block must parse, including pages not listed below.
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `Expected one H1: ${route}`);
-  assert.ok(html.includes('<html lang="en-GB">'), `UK English: ${route}`);
+  assert.ok(html.includes(route.startsWith('/nl/') ? '<html lang="nl">' : '<html lang="en-GB">'), `Page language: ${route}`);
   for (const property of ['title', 'description', 'type', 'url', 'site_name', 'locale', 'image', 'image:width', 'image:height', 'image:alt']) {
     assert.match(html, new RegExp(`<meta property="og:${property}" content="[^"]+"`), `Missing social metadata: ${route}`);
   }
