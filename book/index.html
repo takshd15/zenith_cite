@@ -63,17 +63,16 @@
     .back:hover { color: var(--ink); }
     .eyebrow { margin: 0 0 22px; color: var(--graphite); font-size: 12px; font-weight: 600; }
 
-    .booking { padding: clamp(76px, 9vw, 125px) var(--pad); background: var(--white); }
+    .booking { padding: clamp(44px, 5vw, 72px) var(--pad); background: var(--white); }
     .booking-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(45px, 7vw, 95px); align-items: start; }
     .details-panel { min-width: 0; }
     h1, h2 { margin: 0 0 12px; font: 600 clamp(35px, 4.2vw, 58px)/1 "Space Grotesk", sans-serif; letter-spacing: -.05em; text-transform: lowercase; }
-    .time-meta { margin: 0 0 35px; color: var(--graphite); font-size: 13px; font-weight: 600; }
-    .timezone { display: flex; align-items: center; gap: 10px; margin: 0 0 30px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--graphite); font-size: 12px; }
-    .timezone::before { content:"◉"; color: var(--ink); }
-    form { display: grid; gap: 16px; }
+    .time-meta { margin: 0 0 26px; color: var(--graphite); font-size: 13px; font-weight: 600; }
+    form { display: grid; gap: 14px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     label { display: grid; gap: 7px; color: var(--ink); font-size: 12px; font-weight: 600; }
     input, select, textarea { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid var(--line); border-radius: 2px; background: var(--cream); color: var(--ink); font: 14px Inter, sans-serif; }
-    textarea { min-height: 132px; padding-block: 13px; resize: vertical; line-height: 1.5; }
+    textarea { min-height: 92px; padding-block: 13px; resize: vertical; line-height: 1.5; }
     input:focus, select:focus, textarea:focus { outline: 3px solid var(--cyan); outline-offset: 2px; border-color: var(--ink); }
     .optional { color: var(--muted); font-weight: 400; }
     .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 20px; border: 1px solid var(--ink); border-radius: 2px; background: var(--ink); color: var(--white); font: 600 13px Inter, sans-serif; cursor: pointer; transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out); }
@@ -82,22 +81,17 @@
     .button:focus-visible, a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
     .privacy-note { margin: 4px 0 0; color: var(--muted); font-size: 10px; }
     .form-status { min-height: 20px; margin: 0; color: #8b2d46; font-size: 12px; }
-    .next-panel { min-height: 560px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(30px, 4vw, 52px); border: 1px solid var(--line); border-radius: 4px; color: var(--white); background: radial-gradient(95% 70% at 0% 0%, rgba(95,224,224,.24), transparent 66%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.2), transparent 70%), var(--ink); }
+    .next-panel { min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(30px, 4vw, 52px); border: 1px solid var(--line); border-radius: 4px; color: var(--white); background: radial-gradient(95% 70% at 0% 0%, rgba(95,224,224,.24), transparent 66%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.2), transparent 70%), var(--ink); }
     .next-panel .eyebrow { color: var(--lavender); }
     .next-panel h2 { max-width: 430px; margin-bottom: 24px; }
     .next-panel > div > p { max-width: 450px; color: #c3c6d4; }
-    .next-list { margin: 45px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
+    .next-list { margin: 28px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
     .next-list li { display: grid; grid-template-columns: 32px 1fr; gap: 13px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.2); color: #d7d9e2; font-size: 12px; }
     .next-list span { color: var(--cyan); font-size: 10px; }
-    .response-time { margin: 38px 0 0; color: #9da1b5; font-size: 11px; }
-    .after-booking { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 46px; }
-    .after-item { padding: 20px; border: 1px solid var(--line); background: var(--cream); }
-    .after-item span { display: block; margin-bottom: 13px; color: var(--muted); font-size: 10px; }
-    .after-item strong { display: block; margin-bottom: 7px; font: 600 16px "Space Grotesk", sans-serif; }
-    .after-item p { margin: 0; color: var(--graphite); font-size: 11px; }
+    .response-time { margin: 24px 0 0; color: #9da1b5; font-size: 11px; }
     .details-panel, .next-panel { transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
     .details-panel.is-leaving, .next-panel.is-leaving { opacity: 0; transform: translateY(6px); }
-    .request-confirmed { min-height: 560px; display: none; grid-column: 1 / -1; flex-direction: column; justify-content: center; padding: clamp(32px, 5vw, 64px); border: 1px solid var(--line); background: radial-gradient(90% 70% at 5% 5%, rgba(95,224,224,.56), transparent 70%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.4), transparent 72%), var(--cream); opacity: 0; transform: translateY(6px); transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
+    .request-confirmed { min-height: 420px; display: none; grid-column: 1 / -1; flex-direction: column; justify-content: center; padding: clamp(32px, 5vw, 64px); border: 1px solid var(--line); background: radial-gradient(90% 70% at 5% 5%, rgba(95,224,224,.56), transparent 70%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.4), transparent 72%), var(--cream); opacity: 0; transform: translateY(6px); transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
     .request-confirmed.visible { display: flex; }
     .request-confirmed.visible.is-entered { opacity: 1; transform: translateY(0); }
     .request-confirmed .check { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 34px; border-radius: 50%; background: var(--ink); color: var(--white); }
@@ -111,12 +105,12 @@
     @media (max-width: 900px) {
       .booking-grid { grid-template-columns: 1fr; }
       .booking-grid { gap: 55px; }
-      .after-booking { grid-template-columns: 1fr; }
-    }
+      }
     @media (max-width: 600px) {
       .nav { height: 72px; }
       .booking { padding-inline: 18px; }
-      .next-panel, .request-confirmed { min-height: 440px; }
+      .field-row { grid-template-columns: 1fr; }
+      .request-confirmed { min-height: 360px; }
       footer { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
@@ -132,21 +126,19 @@
           <div class="details-panel" id="form-panel">
             <p class="eyebrow">Request your invitation</p>
             <h1>Book your free AI visibility snapshot</h1>
-            <p class="time-meta">A little context helps us prepare three useful questions before the call. Need pricing for several websites or markets? Choose “Custom quote” below. We reply within one business day.</p>
-            <p class="timezone">Your timezone: <strong id="timezone">Detecting…</strong></p>
+            <p class="time-meta">Free, 15 minutes, three real customer questions. Need pricing for several sites or markets? Choose “Custom quote”. We reply within one business day.</p>
             <form id="booking-details" action="/api/booking-request" method="post">
-              <label>Your name<input id="name" name="name" autocomplete="name" required></label>
-              <label>Work email<input id="email" name="email" type="email" autocomplete="email" required></label>
-              <label>Business name<input id="business" name="business" autocomplete="organization" required></label>
-              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label>
-              <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="Tell us what you want customers to find, where visibility feels unclear, or what prompted you to look into AI search." required></textarea></label>
-              <label>Optional competitor <span class="optional">If there’s one you want us to compare</span><input id="competitor" name="competitor" autocomplete="organization"></label>
-              <label>What are you most interested in?<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
-              <label>Monthly budget <span class="optional">Optional, helps us suggest the right plan</span><select id="budget" name="budget"><option value="">Prefer not to say</option><option value="under-1500">Under €1,500 / month</option><option value="1500-3000">€1,500 – €3,000 / month</option><option value="3000-6000">€3,000 – €6,000 / month</option><option value="6000-plus">€6,000+ / month</option><option value="one-time">One-time audit only</option></select></label>
+              <div class="field-row"><label>Your name<input id="name" name="name" autocomplete="name" required></label>
+              <label>Work email<input id="email" name="email" type="email" autocomplete="email" required></label></div>
+              <div class="field-row"><label>Business name<input id="business" name="business" autocomplete="organization" required></label>
+              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label></div>
+              <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="What should customers find you for? Mention a competitor if you want a comparison." required></textarea></label>
+              <div class="field-row"><label>Interested in<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
+              <label>Monthly budget (optional)<select id="budget" name="budget"><option value="">Prefer not to say</option><option value="under-1500">Under €1,500 / month</option><option value="1500-3000">€1,500 – €3,000 / month</option><option value="3000-6000">€3,000 – €6,000 / month</option><option value="6000-plus">€6,000+ / month</option><option value="one-time">One-time audit only</option></select></label></div>
               <input id="timezone-field" name="timezone" type="hidden">
               <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
               <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
-              <p class="privacy-note">We’ll use these details to prepare for the snapshot and send the Calendly booking link to your email. Read the <a href="/privacy/">privacy policy</a>.</p>
+              <p class="privacy-note">We use these details to prepare and to email your Calendly link. <a href="/privacy/">Privacy policy</a>.</p>
             </form>
           </div>
 
@@ -163,23 +155,9 @@
             <p>If it does not arrive, check your spam or promotions folder before submitting another request.</p>
           </div>
         </div>
-
-        <div class="after-booking" aria-label="What happens after booking">
-          <div class="after-item"><span>01</span><strong>Email invitation</strong><p>We send the private Calendly link to the address you provide.</p></div>
-          <div class="after-item"><span>02</span><strong>Choose a time</strong><p>Open the link and select an available 15-minute slot.</p></div>
-          <div class="after-item"><span>03</span><strong>Calendar confirmation</strong><p>Calendly provides the video-call invitation and rescheduling details.</p></div>
-        </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="site-footer-top">
-        <div class="site-footer-brand"><a class="site-footer-logo" href="/">zenith cite</a><p>Zenith Cite is an AI visibility agency offering AI visibility audits, generative engine optimisation (GEO), AI SEO, ChatGPT and Perplexity optimisation, and ongoing measurement for businesses in the Netherlands, the UK and across Europe, in English and Dutch.</p><a class="site-footer-email" href="mailto:takshdange@gmail.com">takshdange@gmail.com</a><div class="site-footer-lang"><a href="/" hreflang="en" lang="en">English</a><a href="/nl/geo-diensten/" hreflang="nl" lang="nl">Nederlands</a></div></div>
-        <nav class="site-footer-col" aria-label="Services"><h2>Services</h2><ul><li><a href="/ai-visibility-audit/">AI visibility audit</a></li><li><a href="/generative-engine-optimisation/">GEO services</a></li><li><a href="/ai-seo/">AI SEO</a></li><li><a href="/ai-findability/">AI findability</a></li><li><a href="/chatgpt-visibility/">Visibility in ChatGPT</a></li><li><a href="/perplexity-optimization/">Perplexity optimization</a></li><li><a href="/book/?interest=custom">Custom quote</a></li></ul></nav>
-        <nav class="site-footer-col" aria-label="Explore"><h2>Explore</h2><ul><li><a href="/about/">About Zenith Cite</a></li><li><a href="/#pricing">Packages and pricing</a></li><li><a href="/insights/">Insights and guides</a></li><li><a href="/#faqs">FAQ</a></li><li><a href="/book/">Free visibility snapshot</a></li><li><a href="/book/">Contact</a></li></ul></nav>
-        <nav class="site-footer-col" aria-label="Nederlands" lang="nl"><h2>Nederlands</h2><ul><li><a href="/nl/geo-diensten/">GEO-diensten</a></li><li><a href="/nl/ai-zichtbaarheid-audit/">AI-zichtbaarheid audit</a></li><li><a href="/nl/ai-zoekoptimalisatie/">AI-zoekoptimalisatie</a></li><li><a href="/nl/ai-vindbaarheid/">AI-vindbaarheid</a></li><li><a href="/nl/chatgpt-vindbaarheid/">ChatGPT-vindbaarheid</a></li></ul></nav>
-      </div>
-      <div class="site-footer-bottom"><span>© 2026 Zenith Cite · Search and AI visibility outcomes are not guaranteed.</span><nav class="site-footer-legal" aria-label="Legal"><a href="/privacy/">Privacy policy</a><a href="/terms/">Website terms</a><a href="#" data-cookie-settings>Cookie settings</a></nav></div>
-    </footer>
+    <footer class="site-footer site-footer-slim"><div class="site-footer-bottom"><span>© 2026 Zenith Cite · <a href="mailto:takshdange@gmail.com">takshdange@gmail.com</a></span><nav class="site-footer-legal" aria-label="Legal"><a href="/">Home</a><a href="/#pricing">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Website terms</a><a href="#" data-cookie-settings>Cookie settings</a></nav></div></footer>
   </div>
 
   <script>
@@ -199,10 +177,8 @@
 
       try {
         var detectedTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local time';
-        document.getElementById('timezone').textContent = detectedTimezone;
         timezoneField.value = detectedTimezone;
       } catch (error) {
-        document.getElementById('timezone').textContent = 'Local time';
         timezoneField.value = 'Local time';
       }
 
