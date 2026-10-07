@@ -18,7 +18,21 @@ Zenith Cite helps founders and marketing teams understand how their businesses a
 
 All prices are in euros and include taxes. Scope is agreed before work begins. Monthly plans start with a three-month minimum term, then continue month to month with 30 days' notice. Every audit or quote request receives a reply within one business day. Search rankings, AI recommendations, third-party placements, traffic, and commercial outcomes are not guaranteed.
 
+## Industries and markets
+
+- [AI visibility by industry](https://zenith-cite.com/industries/): Overview of sector-specific AI visibility work.
+- [Dental clinics](https://zenith-cite.com/industries/dental-clinics/): Treatment pages, local information and patient questions.
+- [Law firms](https://zenith-cite.com/industries/law-firms/): Practice areas, lawyer profiles and legal directories.
+- [Real estate agencies](https://zenith-cite.com/industries/real-estate/): Area expertise, service pages and portal profiles.
+- [E-commerce brands](https://zenith-cite.com/industries/ecommerce/): Product data, buying guides and review sources.
+- [SaaS companies](https://zenith-cite.com/industries/saas/): Comparisons, review platforms and product information.
+- [Working across the EU](https://zenith-cite.com/europe/): Remote work with businesses across the European Union; testing in English and Dutch.
+- [White-label GEO for agencies](https://zenith-cite.com/white-label-geo/): AI visibility audits and monthly GEO delivered under a partner agency's brand. Pricing on request.
+
 ## Nederlandstalige pagina's
+
+- [Nederlandse homepage](https://zenith-cite.com/nl/): Overzicht van diensten, werkwijze en prijzen.
+- [Gratis snapshot plannen](https://zenith-cite.com/nl/boeken/): Vraag een gratis snapshot of offerte aan.
 
 - [GEO-diensten](https://zenith-cite.com/nl/geo-diensten/): Doorlopende GEO-uitvoering en meting (Growth €1.500, Authority €2.800 per maand).
 - [AI-zichtbaarheid audit](https://zenith-cite.com/nl/ai-zichtbaarheid-audit/): Eenmalige audit van €750 over vier AI-platforms.

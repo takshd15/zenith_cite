@@ -17,6 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="See whether ChatGPT, Perplexity and Google AI recommend your business. Free AI visibility snapshot, audits from €750 and monthly GEO implementation.">
   <link rel="canonical" href="https://zenith-cite.com/">
+  <link rel="alternate" hreflang="en" href="https://zenith-cite.com/">
+  <link rel="alternate" hreflang="nl" href="https://zenith-cite.com/nl/">
   <meta property="og:title" content="AI Visibility Agency: Get Recommended by ChatGPT | Zenith Cite">
   <meta property="og:description" content="See whether ChatGPT, Perplexity and Google AI recommend your business. Free AI visibility snapshot, audits from €750 and monthly GEO implementation.">
   <meta property="og:type" content="website">
@@ -138,6 +140,22 @@
     .deliverable h3 { margin-bottom: 11px; font: 600 20px/1.15 "DM Sans", sans-serif; letter-spacing: -.03em; }
     .deliverable p { margin-bottom: 0; color: var(--graphite); font-size: 13px; }
 
+    .compare { background: var(--white); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 56px; }
+    .answer-card { padding: 28px; border: 1px solid var(--line); border-radius: 10px; background: var(--cream); }
+    .answer-card.after { background: radial-gradient(90% 90% at 0% 0%, rgba(95,224,224,.28), transparent 70%), radial-gradient(80% 90% at 100% 100%, rgba(184,240,216,.4), transparent 70%), var(--cream); }
+    .answer-label { display: inline-block; margin-bottom: 18px; padding: 5px 10px; border-radius: 999px; background: var(--ink); color: var(--white); font-size: 11px; font-weight: 600; }
+    .answer-card.before .answer-label { background: var(--muted); }
+    .answer-prompt { margin-bottom: 16px; padding: 12px 14px; border-radius: 8px; background: var(--white); color: var(--ink); font-size: 14px; font-weight: 500; }
+    .answer-text { color: var(--graphite); font-size: 14px; }
+    .answer-text strong { color: var(--ink); }
+    .answer-sources { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .answer-sources li { padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); color: var(--graphite); font-size: 11px; }
+    .answer-sources li.yours { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+    .compare-note { margin: 22px 0 0; color: var(--muted); font-size: 12px; }
+    .fit-industries { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+    .fit-industries a { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.6); color: var(--ink); font-size: 12px; font-weight: 600; }
+    .fit-industries a:hover { background: var(--white); }
     .fit { background: var(--white); }
     .fit-card { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(50px, 9vw, 120px); padding: clamp(40px, 6vw, 80px); border: 1px solid var(--line); background: radial-gradient(80% 150% at 100% 0%, rgba(95,224,224,.24), transparent 58%), radial-gradient(70% 140% at 75% 100%, rgba(242,168,224,.18), transparent 58%), var(--cream); }
     .fit h2 { margin-bottom: 28px; }
@@ -194,6 +212,7 @@
       .deliverable-grid { grid-template-columns: 1fr 1fr; }
       .fit-card { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
       .plan { min-height: auto; }
       .plan-description { min-height: auto; }
     }
@@ -333,6 +352,14 @@
           "@type": "Answer",
           "text": "<p>Use the booking form and choose “Custom quote” as your interest. Tell us about your websites, markets and goals, and we reply within one business day with next steps or a written proposal.</p>"
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Which markets do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>We work remotely with businesses across the European Union. We test customer questions in English and Dutch, and compare answers between countries where that matters.</p><p>Programmes covering several countries are scoped as a Custom plan. See <a href=\"/europe/\">working across the EU</a>.</p>"
+        }
       }
     ]
   }
@@ -391,6 +418,17 @@
         </div>
       </section>
 
+      <section class="section compare" id="example">
+        <p class="eyebrow">What changes</p>
+        <h2 class="display section-title">From left out to cited: what the work aims for</h2>
+        <p class="intro">An illustrative example of the same customer question before and after visibility work. The businesses are fictional; real results vary and are never guaranteed.</p>
+        <div class="compare-grid">
+          <article class="answer-card before"><span class="answer-label">Before</span><p class="answer-prompt">“Which accountant in Utrecht is best for a small online shop?”</p><p class="answer-text">Popular options include <strong>Competitor A</strong>, known for e-commerce bookkeeping, and <strong>Competitor B</strong>, which offers fixed monthly fees. Both have strong reviews.</p><ul class="answer-sources" aria-label="Sources cited"><li>competitor-a.example</li><li>review-site.example</li><li>directory.example</li></ul></article>
+          <article class="answer-card after"><span class="answer-label">After</span><p class="answer-prompt">“Which accountant in Utrecht is best for a small online shop?”</p><p class="answer-text">Options include <strong>Your Business</strong>, which specialises in web shops and publishes fixed packages from €95 a month, and <strong>Competitor A</strong>. Your Business is frequently praised for VAT support for EU sales.</p><ul class="answer-sources" aria-label="Sources cited"><li class="yours">your-business.example/webshops</li><li>review-site.example</li><li>directory.example</li></ul></article>
+        </div>
+        <p class="compare-note">What changed in this example: a dedicated service page for web shops, published prices, consistent directory listings and more recent reviews. These are the kinds of changes we recommend, based on what the answers actually cite.</p>
+      </section>
+
       <section class="section approach" id="approach">
         <p class="eyebrow">Our approach</p>
         <h2 class="display section-title">how our geo bureau helps customers find you in ai search</h2>
@@ -415,7 +453,7 @@
       </section>
 
       <section class="section fit" id="about">
-        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">Who we help: SaaS, e-commerce, local services</h2></div><div class="fit-copy"><p>Zenith works with founders and marketing teams whose customers compare providers, explore specialist services, or research who to trust.</p><p>The best starting point is an established website, a clear offer, and the ability to implement improvements.</p><a class="button" href="/book/" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
+        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">Who we help: SaaS, e-commerce, local services</h2></div><div class="fit-copy"><p>Zenith works with founders and marketing teams whose customers compare providers, explore specialist services, or research who to trust.</p><p>The best starting point is an established website, a clear offer, and the ability to implement improvements.</p><nav class="fit-industries" aria-label="Industries"><a href="/industries/dental-clinics/">Dental clinics</a><a href="/industries/law-firms/">Law firms</a><a href="/industries/real-estate/">Real estate</a><a href="/industries/ecommerce/">E-commerce</a><a href="/industries/saas/">SaaS</a><a href="/industries/">All industries</a></nav><a class="button" href="/book/" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
       </section>
 
       <section class="section pricing" id="pricing">
@@ -442,6 +480,7 @@
           <details><summary>Is there a minimum contract?</summary><div class="answer"><p>Growth and Authority start with a three-month minimum term, which gives technical and content changes time to take effect.</p><p>After that, plans continue month to month and can be cancelled with 30 days’ notice. The audit is a one-time purchase with no ongoing commitment.</p></div></details>
           <details><summary>How will we track progress?</summary><div class="answer"><p>Each month you receive a written report showing the work completed, the re-tested customer questions, and any changes in mentions, recommendations and cited links.</p><p>Where your analytics allow it, we also report visits and enquiries from AI platforms and search.</p></div></details>
           <details><summary>How do I get a quote?</summary><div class="answer"><p>Use the booking form and choose “Custom quote” as your interest. Tell us about your websites, markets and goals, and we reply within one business day with next steps or a written proposal.</p></div></details>
+          <details><summary>Which markets do you cover?</summary><div class="answer"><p>We work remotely with businesses across the European Union. We test customer questions in English and Dutch, and compare answers between countries where that matters.</p><p>Programmes covering several countries are scoped as a Custom plan. See <a href="/europe/">working across the EU</a>.</p></div></details>
         </div></div>
       </section>
 
@@ -452,10 +491,11 @@
 
     <footer class="site-footer">
       <div class="site-footer-top">
-        <div class="site-footer-brand"><a class="site-footer-logo" href="/">zenith cite</a><p>Zenith Cite is an AI visibility agency offering AI visibility audits, generative engine optimisation (GEO), AI SEO, ChatGPT and Perplexity optimisation, and ongoing measurement for businesses in the Netherlands, the UK and across Europe, in English and Dutch.</p><a class="site-footer-email" href="mailto:takshdange@gmail.com">takshdange@gmail.com</a><div class="site-footer-lang"><a href="/" hreflang="en" lang="en">English</a><a href="/nl/geo-diensten/" hreflang="nl" lang="nl">Nederlands</a></div></div>
-        <nav class="site-footer-col" aria-label="Services"><h2>Services</h2><ul><li><a href="/ai-visibility-audit/">AI visibility audit</a></li><li><a href="/generative-engine-optimisation/">GEO services</a></li><li><a href="/ai-seo/">AI SEO</a></li><li><a href="/ai-findability/">AI findability</a></li><li><a href="/chatgpt-visibility/">Visibility in ChatGPT</a></li><li><a href="/perplexity-optimization/">Perplexity optimization</a></li><li><a href="/book/?interest=custom">Custom quote</a></li></ul></nav>
-        <nav class="site-footer-col" aria-label="Explore"><h2>Explore</h2><ul><li><a href="/about/">About Zenith Cite</a></li><li><a href="/#pricing">Packages and pricing</a></li><li><a href="/insights/">Insights and guides</a></li><li><a href="/#faqs">FAQ</a></li><li><a href="/book/">Free visibility snapshot</a></li><li><a href="/book/">Contact</a></li></ul></nav>
-        <nav class="site-footer-col" aria-label="Nederlands" lang="nl"><h2>Nederlands</h2><ul><li><a href="/nl/geo-diensten/">GEO-diensten</a></li><li><a href="/nl/ai-zichtbaarheid-audit/">AI-zichtbaarheid audit</a></li><li><a href="/nl/ai-zoekoptimalisatie/">AI-zoekoptimalisatie</a></li><li><a href="/nl/ai-vindbaarheid/">AI-vindbaarheid</a></li><li><a href="/nl/chatgpt-vindbaarheid/">ChatGPT-vindbaarheid</a></li></ul></nav>
+        <div class="site-footer-brand"><a class="site-footer-logo" href="/">zenith cite</a><p>Zenith Cite is an AI visibility agency offering AI visibility audits, generative engine optimisation (GEO), AI SEO, ChatGPT and Perplexity optimisation, white-label GEO and ongoing measurement for businesses across the EU, in English and Dutch.</p><a class="site-footer-email" href="mailto:takshdange@gmail.com">takshdange@gmail.com</a><div class="site-footer-lang"><a href="/" hreflang="en" lang="en">English</a><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></div></div>
+        <nav class="site-footer-col" aria-label="Services"><h2>Services</h2><ul><li><a href="/ai-visibility-audit/">AI visibility audit</a></li><li><a href="/generative-engine-optimisation/">GEO services</a></li><li><a href="/ai-seo/">AI SEO</a></li><li><a href="/ai-findability/">AI findability</a></li><li><a href="/chatgpt-visibility/">Visibility in ChatGPT</a></li><li><a href="/perplexity-optimization/">Perplexity optimization</a></li><li><a href="/white-label-geo/">White-label GEO</a></li><li><a href="/book/?interest=custom">Custom quote</a></li></ul></nav>
+        <nav class="site-footer-col" aria-label="Industries"><h2>Industries</h2><ul><li><a href="/industries/dental-clinics/">Dental clinics</a></li><li><a href="/industries/law-firms/">Law firms</a></li><li><a href="/industries/real-estate/">Real estate</a></li><li><a href="/industries/ecommerce/">E-commerce</a></li><li><a href="/industries/saas/">SaaS</a></li><li><a href="/industries/">All industries</a></li></ul></nav>
+        <nav class="site-footer-col" aria-label="Explore"><h2>Explore</h2><ul><li><a href="/about/">About Zenith Cite</a></li><li><a href="/#pricing">Packages and pricing</a></li><li><a href="/europe/">Working across the EU</a></li><li><a href="/insights/">Insights and guides</a></li><li><a href="/#faqs">FAQ</a></li><li><a href="/book/">Free visibility snapshot</a></li></ul></nav>
+        <nav class="site-footer-col" aria-label="Nederlands" lang="nl"><h2>Nederlands</h2><ul><li><a href="/nl/">Nederlandse homepage</a></li><li><a href="/nl/geo-diensten/">GEO-diensten</a></li><li><a href="/nl/ai-zichtbaarheid-audit/">AI-zichtbaarheid audit</a></li><li><a href="/nl/ai-zoekoptimalisatie/">AI-zoekoptimalisatie</a></li><li><a href="/nl/ai-vindbaarheid/">AI-vindbaarheid</a></li><li><a href="/nl/chatgpt-vindbaarheid/">ChatGPT-vindbaarheid</a></li><li><a href="/nl/boeken/">Gratis snapshot</a></li></ul></nav>
       </div>
       <div class="site-footer-bottom"><span>© 2026 Zenith Cite · Search and AI visibility outcomes are not guaranteed.</span><nav class="site-footer-legal" aria-label="Legal"><a href="/privacy/">Privacy policy</a><a href="/terms/">Website terms</a><a href="#" data-cookie-settings>Cookie settings</a></nav></div>
     </footer>
