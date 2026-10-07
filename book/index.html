@@ -121,6 +121,7 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
   </style>
+  <link rel="stylesheet" href="/assets/site-footer.css">
 </head>
 <body>
   <div class="page">
@@ -131,7 +132,7 @@
           <div class="details-panel" id="form-panel">
             <p class="eyebrow">Request your invitation</p>
             <h1>Book your free AI visibility snapshot</h1>
-            <p class="time-meta">A little context helps us prepare three useful questions before the call.</p>
+            <p class="time-meta">A little context helps us prepare three useful questions before the call. Need pricing for several websites or markets? Choose “Custom quote” below. We reply within one business day.</p>
             <p class="timezone">Your timezone: <strong id="timezone">Detecting…</strong></p>
             <form id="booking-details" action="/api/booking-request" method="post">
               <label>Your name<input id="name" name="name" autocomplete="name" required></label>
@@ -140,7 +141,8 @@
               <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label>
               <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="Tell us what you want customers to find, where visibility feels unclear, or what prompted you to look into AI search." required></textarea></label>
               <label>Optional competitor <span class="optional">If there’s one you want us to compare</span><input id="competitor" name="competitor" autocomplete="organization"></label>
-              <label>What are you most interested in?<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option></select></label>
+              <label>What are you most interested in?<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
+              <label>Monthly budget <span class="optional">Optional, helps us suggest the right plan</span><select id="budget" name="budget"><option value="">Prefer not to say</option><option value="under-1500">Under €1,500 / month</option><option value="1500-3000">€1,500 – €3,000 / month</option><option value="3000-6000">€3,000 – €6,000 / month</option><option value="6000-plus">€6,000+ / month</option><option value="one-time">One-time audit only</option></select></label>
               <input id="timezone-field" name="timezone" type="hidden">
               <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
               <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
@@ -150,7 +152,7 @@
 
           <aside class="next-panel" id="next-panel">
             <div><p class="eyebrow">What happens next</p><h2>check your inbox. choose your time.</h2><p>Once we receive your details, we’ll email you the private Calendly link for the free snapshot.</p><ul class="next-list"><li><span>01</span>Submit your business context</li><li><span>02</span>Receive the booking link by email</li><li><span>03</span>Choose the 15-minute time that suits you</li></ul></div>
-            <p class="response-time">The booking email should arrive shortly after your request is received.</p>
+            <p class="response-time">We reply to every request within one business day. No obligation and no hard sell.</p>
           </aside>
 
           <div class="request-confirmed" id="request-confirmed" role="status" aria-live="polite">
@@ -169,13 +171,21 @@
         </div>
       </section>
     </main>
-    <footer><a class="logo" href="/">zenith cite</a><span>AI visibility audits, implementation, and ongoing measurement.</span></footer>
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="site-footer-brand"><a class="site-footer-logo" href="/">zenith cite</a><p>Zenith Cite is an AI visibility agency offering AI visibility audits, generative engine optimisation (GEO), AI SEO, ChatGPT and Perplexity optimisation, and ongoing measurement for businesses in the Netherlands, the UK and across Europe, in English and Dutch.</p><a class="site-footer-email" href="mailto:takshdange@gmail.com">takshdange@gmail.com</a><div class="site-footer-lang"><a href="/" hreflang="en" lang="en">English</a><a href="/nl/geo-diensten/" hreflang="nl" lang="nl">Nederlands</a></div></div>
+        <nav class="site-footer-col" aria-label="Services"><h2>Services</h2><ul><li><a href="/ai-visibility-audit/">AI visibility audit</a></li><li><a href="/generative-engine-optimisation/">GEO services</a></li><li><a href="/ai-seo/">AI SEO</a></li><li><a href="/ai-findability/">AI findability</a></li><li><a href="/chatgpt-visibility/">Visibility in ChatGPT</a></li><li><a href="/perplexity-optimization/">Perplexity optimization</a></li><li><a href="/book/?interest=custom">Custom quote</a></li></ul></nav>
+        <nav class="site-footer-col" aria-label="Explore"><h2>Explore</h2><ul><li><a href="/about/">About Zenith Cite</a></li><li><a href="/#pricing">Packages and pricing</a></li><li><a href="/insights/">Insights and guides</a></li><li><a href="/#faqs">FAQ</a></li><li><a href="/book/">Free visibility snapshot</a></li><li><a href="/book/">Contact</a></li></ul></nav>
+        <nav class="site-footer-col" aria-label="Nederlands" lang="nl"><h2>Nederlands</h2><ul><li><a href="/nl/geo-diensten/">GEO-diensten</a></li><li><a href="/nl/ai-zichtbaarheid-audit/">AI-zichtbaarheid audit</a></li><li><a href="/nl/ai-zoekoptimalisatie/">AI-zoekoptimalisatie</a></li><li><a href="/nl/ai-vindbaarheid/">AI-vindbaarheid</a></li><li><a href="/nl/chatgpt-vindbaarheid/">ChatGPT-vindbaarheid</a></li></ul></nav>
+      </div>
+      <div class="site-footer-bottom"><span>© 2026 Zenith Cite · Search and AI visibility outcomes are not guaranteed.</span><nav class="site-footer-legal" aria-label="Legal"><a href="/privacy/">Privacy policy</a><a href="/terms/">Website terms</a><a href="#" data-cookie-settings>Cookie settings</a></nav></div>
+    </footer>
   </div>
 
   <script>
     (function () {
       var params = new URLSearchParams(window.location.search);
-      var allowedInterests = ['snapshot', 'visibility-audit', 'growth', 'authority'];
+      var allowedInterests = ['snapshot', 'visibility-audit', 'growth', 'authority', 'custom'];
       var requestedInterest = params.get('interest');
       var interest = allowedInterests.indexOf(requestedInterest) >= 0 ? requestedInterest : 'snapshot';
       var form = document.getElementById('booking-details');

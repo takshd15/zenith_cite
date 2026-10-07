@@ -6,12 +6,21 @@ create table if not exists public.booking_requests (
   website text not null check (char_length(website) between 4 and 2048),
   problem text not null check (char_length(problem) between 1 and 3000),
   competitor text check (competitor is null or char_length(competitor) <= 300),
-  interest text not null default 'snapshot' check (interest in ('snapshot', 'visibility-audit', 'growth', 'authority')),
+  interest text not null default 'snapshot' check (interest in ('snapshot', 'visibility-audit', 'growth', 'authority', 'custom')),
+  budget text check (budget is null or budget in ('under-1500', '1500-3000', '3000-6000', '6000-plus', 'one-time')),
   timezone text not null check (char_length(timezone) between 1 and 100),
   status text not null default 'new' check (status in ('new', 'contacted', 'booked', 'closed')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+-- Upgrades for tables created before quote requests and budgets existed.
+alter table public.booking_requests
+  add column if not exists budget text
+  check (budget is null or budget in ('under-1500', '1500-3000', '3000-6000', '6000-plus', 'one-time'));
+alter table public.booking_requests drop constraint if exists booking_requests_interest_check;
+alter table public.booking_requests add constraint booking_requests_interest_check
+  check (interest in ('snapshot', 'visibility-audit', 'growth', 'authority', 'custom'));
 
 create index if not exists booking_requests_created_at_idx
   on public.booking_requests (created_at desc);
