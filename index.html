@@ -104,9 +104,6 @@
     .text-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
     .snapshot-note { margin: 25px 0 0; color: var(--graphite); font-size: 12px; }
     .hero-art { min-width: 0; display: grid; place-items: center; perspective: 1400px; }
-    .platforms { width: min(100%, 360px); display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; transform: rotateY(-16deg) rotateX(6deg) rotateZ(2deg); transform-style: preserve-3d; }
-    .platform { min-height: 88px; display: flex; align-items: center; gap: 16px; padding: 0 24px; border: 1px solid rgba(255,255,255,.8); border-radius: 10px; background: rgba(255,255,255,.82); color: var(--ink); font: 500 18px/1.2 "DM Sans", sans-serif; box-shadow: -16px -8px 0 -3px rgba(255,255,255,.4), -32px -16px 0 -6px rgba(255,255,255,.25), 0 24px 48px rgba(20,23,43,.1); backdrop-filter: blur(10px); }
-    .platform svg { width: 34px; height: 34px; flex: none; }
 
     .what-we-do { background: var(--cream); }
     .what-we-do h2 { margin-bottom: 28px; }
@@ -122,9 +119,9 @@
     .question-item span { color: var(--muted); font-size: 11px; }
     .question-item p { margin: 0; color: var(--ink); font: 500 clamp(20px, 2vw, 28px)/1.2 "DM Sans", sans-serif; letter-spacing: -.035em; }
 
-    .approach { background: var(--ink); color: var(--white); }
-    .approach .eyebrow, .dark-section .eyebrow { color: var(--lavender); }
-    .approach .intro { color: #c3c6d4; }
+    .approach { background: radial-gradient(60% 80% at 0% 0%, rgba(242,168,224,.28), transparent 60%), radial-gradient(60% 80% at 100% 100%, rgba(95,224,224,.25), transparent 60%), var(--cream); color: var(--ink); }
+    .approach .eyebrow { color: var(--muted); }
+    .approach .intro { color: var(--graphite); }
     .steps { margin-top: 78px; border-top: 1px solid rgba(255,255,255,.2); }
     .step { display: grid; grid-template-columns: 90px 1fr 1fr; gap: 32px; padding: 42px 0; border-bottom: 1px solid rgba(255,255,255,.2); align-items: start; }
     .step-number { color: var(--cyan); font-size: 13px; font-weight: 600; }
@@ -205,7 +202,6 @@
       .hero { min-height: auto; grid-template-columns: 1fr; }
       .hero-copy { max-width: 800px; }
       .hero { padding-top: 140px; }
-      .platforms { transform: none; }
       .editorial-grid, .faq-layout { grid-template-columns: 1fr; gap: 52px; }
       .step { grid-template-columns: 62px 1fr; }
       .step-copy { grid-column: 2; }
@@ -226,7 +222,6 @@
       .nav .logo-lockup { font-size: 24px; }
       .hero-actions { display: grid; justify-items: center; gap: 18px; }
       .hero-actions .button { width: 100%; }
-      .platform { min-height: 72px; font-size: 16px; }
       .section-title { font-size: 42px; }
       .pricing-grid { grid-template-columns: 1fr; }
       .question-item { grid-template-columns: 36px 1fr; gap: 12px; }
@@ -278,7 +273,7 @@
         "name": "What is AI visibility?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>AI visibility describes whether and how your business appears in AI-generated answers. That can include a brand mention, a recommendation, or a link to your website.</p><p>These are different outcomes, and we report them separately.</p>"
+          "text": "<p>AI visibility is whether your business shows up when someone asks an AI tool for help, and how it is described when it does. Showing up can mean a passing mention, a recommendation, or a link to your site.</p><p>Those are different results, so we count them separately.</p>"
         }
       },
       {
@@ -286,7 +281,7 @@
         "name": "What is generative engine optimisation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>Generative engine optimisation, often called GEO, is the practice of improving how a business can be discovered and represented in AI-generated answers.</p><p>Our work focuses on useful content, clear business information, technical accessibility, and documented testing.</p>"
+          "text": "<p>Generative engine optimisation, or GEO, is work that makes it easier for AI tools to find your business and describe it correctly.</p><p>For us that means useful pages, consistent business details, a site that crawlers can read, and testing that is written down.</p>"
         }
       },
       {
@@ -294,7 +289,7 @@
         "name": "Is this different from SEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>The work overlaps substantially. A technically accessible website and useful, reliable content support traditional search and Google’s AI search features.</p><p>Our service adds testing of AI-generated answers and competitor visibility to help identify further priorities.</p>"
+          "text": "<p>Mostly it is the same work. A site that loads, can be crawled and answers real questions does well in normal search and in Google’s AI features.</p><p>What we add is testing the AI answers themselves and comparing you with named competitors, which shows gaps a normal SEO report misses.</p>"
         }
       },
       {
@@ -302,7 +297,7 @@
         "name": "Can you guarantee that ChatGPT will recommend my business?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>No. AI platforms control their answers, and those answers can vary between searches and users.</p><p>We commit to an agreed scope of work and transparent reporting.</p>"
+          "text": "<p>No. The AI companies decide what their tools say, and the answer to the same question changes between people and days.</p><p>What we can promise is the work we agree on and an honest report on what it did.</p>"
         }
       },
       {
@@ -310,7 +305,7 @@
         "name": "How quickly will I see results?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>The audit provides an initial picture within 48–72 hours after the required information is received.</p><p>Changes in search visibility take longer and depend on your website, competition, implementation, and the platforms themselves. We establish a baseline and track progress over time.</p>"
+          "text": "<p>The audit is ready 48–72 hours after we have what we need from you.</p><p>Changes in the answers take longer, usually weeks to months, depending on your site, your competitors and the platforms. That is why we measure a starting point first and track from there.</p>"
         }
       },
       {
@@ -318,7 +313,7 @@
         "name": "Do I need a new website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>Usually, we begin by assessing your existing website. We identify which changes can be made within your current setup before recommending a rebuild.</p>"
+          "text": "<p>Usually not. We start with the site you have and work out what can be fixed inside it before anyone mentions a rebuild.</p>"
         }
       },
       {
@@ -326,7 +321,7 @@
         "name": "What happens during the free snapshot?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>We explore three relevant customer questions in ChatGPT and Google, discuss what appears, and explain whether a full audit would be useful.</p><p>It is a short initial review, separate from the paid audit.</p>"
+          "text": "<p>We ask ChatGPT and Google three questions your customers would ask, look at the answers together, and tell you whether a full audit is worth it.</p><p>It is a short first look and separate from the paid audit.</p>"
         }
       },
       {
@@ -334,7 +329,7 @@
         "name": "Is there a minimum contract?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>Growth and Authority start with a three-month minimum term, which gives technical and content changes time to take effect.</p><p>After that, plans continue month to month and can be cancelled with 30 days’ notice. The audit is a one-time purchase with no ongoing commitment.</p>"
+          "text": "<p>Growth and Authority run for at least three months, because technical and content changes need that long to show up.</p><p>After that you go month to month with 30 days’ notice. The audit is a one-off payment with nothing ongoing.</p>"
         }
       },
       {
@@ -342,7 +337,7 @@
         "name": "How will we track progress?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>Each month you receive a written report showing the work completed, the re-tested customer questions, and any changes in mentions, recommendations and cited links.</p><p>Where your analytics allow it, we also report visits and enquiries from AI platforms and search.</p>"
+          "text": "<p>Every month you get a written report: what we did, the same customer questions asked again, and any change in mentions, recommendations and cited links.</p><p>If your analytics allow it, we add visits and enquiries that came from AI tools and search.</p>"
         }
       },
       {
@@ -350,7 +345,7 @@
         "name": "How do I get a quote?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>Use the booking form and choose “Custom quote” as your interest. Tell us about your websites, markets and goals, and we reply within one business day with next steps or a written proposal.</p>"
+          "text": "<p>Fill in the booking form and pick “Custom quote”. Tell us about your sites, markets and goals. We reply within one business day, either with questions or with a written proposal.</p>"
         }
       },
       {
@@ -358,15 +353,17 @@
         "name": "Which markets do you cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<p>We work remotely with businesses across the European Union. We test customer questions in English and Dutch, and compare answers between countries where that matters.</p><p>Programmes covering several countries are scoped as a Custom plan. See <a href=\"/europe/\">working across the EU</a>.</p>"
+          "text": "<p>We work remotely with businesses anywhere in the European Union. We test in English and Dutch, and compare answers between countries when that matters for you.</p><p>Plans that cover several countries are quoted as a Custom plan. See <a href=\"/europe/\">working across the EU</a>.</p>"
         }
       }
     ]
   }
   </script>
   <link rel="stylesheet" href="/assets/site-footer.css">
+  <link rel="stylesheet" href="/assets/visuals.css">
 </head>
 <body>
+  <svg class="v-sprite" aria-hidden="true" focusable="false"><defs><linearGradient id="gemini-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8df5"/><stop offset="1" stop-color="#9b72cb"/></linearGradient></defs><symbol id="ic-chatgpt" viewBox="0 0 24 24"><path fill="#10a37f" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></symbol><symbol id="ic-perplexity" viewBox="0 0 24 24"><path fill="#1f8a8a" d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"/></symbol><symbol id="ic-gemini" viewBox="0 0 24 24"><path fill="url(#gemini-grad)" d="M12 0Q12 12 24 12Q12 12 12 24Q12 12 0 12Q12 12 12 0Z"/></symbol><symbol id="ic-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol></svg>
   <div class="page">
     <header class="site-header">
       <nav class="nav shell" aria-label="Primary navigation">
@@ -384,12 +381,12 @@
           <div class="hero-actions"><a class="button" href="/book/" data-booking-cta="hero">Get a Free Snapshot</a><a class="text-link" href="#approach">See How It Works <span aria-hidden="true">→</span></a></div>
         </div>
         <div class="hero-art">
-          <ul class="platforms" aria-label="AI platforms we test">
-            <li class="platform"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#10a37f" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>ChatGPT</li>
-            <li class="platform"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1f8a8a" d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"/></svg>Perplexity</li>
-            <li class="platform"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="gemini-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8df5"/><stop offset="1" stop-color="#9b72cb"/></linearGradient></defs><path fill="url(#gemini-gradient)" d="M12 0Q12 12 24 12Q12 12 12 24Q12 12 0 12Q12 12 12 0Z"/></svg>Gemini</li>
-            <li class="platform"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>Google AI Overviews</li>
-          </ul>
+          <div class="v-hero" role="img" aria-label="Illustration: ChatGPT answers the question “What’s the best physiotherapist in Amsterdam?” and cites Your Practice, next to similar answers from Perplexity and Google AI Overviews. ChatGPT, Perplexity, Gemini and Google AI Overviews are the platforms we test.">
+            <div class="v-query">What’s the best physiotherapist in Amsterdam?<span class="v-send">→</span></div>
+            <div class="v-card v-back v-back-left"><div class="v-head"><svg class="v-ic" aria-hidden="true"><use href="#ic-perplexity"/></svg>Perplexity</div><p class="v-text">The top physiotherapists in Amsterdam include:</p><ol class="v-list"><li>Your Practice</li><li>Clinic B</li><li>Clinic A</li></ol></div>
+            <div class="v-card v-back v-back-right"><div class="v-head"><svg class="v-ic" aria-hidden="true"><use href="#ic-google"/></svg>Google AI Overview</div><p class="v-text">According to several sources, reputable options are:</p><ol class="v-list"><li>Your Practice</li><li>Clinic A</li><li>Clinic B</li></ol></div>
+            <div class="v-card v-main"><div class="v-head"><svg class="v-ic" aria-hidden="true"><use href="#ic-chatgpt"/></svg>ChatGPT</div><p class="v-text">Here are some of the best physiotherapists in Amsterdam, based on reviews and available information:</p><ol class="v-list"><li>Clinic A</li><li>Clinic B</li><li class="you">Your Practice<span class="v-badge">↑ Cited</span></li></ol><div class="v-sources">Sources ›</div></div>
+          </div>
         </div>
       </section>
 
@@ -398,9 +395,9 @@
           <p class="eyebrow">ai visibility · ai search engine optimization</p>
           <div>
             <h2 class="display section-title">an ai visibility agency for the answers your customers read</h2>
-            <p>Zenith Cite helps businesses improve their AI visibility. When people ask ChatGPT, Perplexity, Gemini or Google AI Overviews who to choose, those answers increasingly decide which companies make the shortlist. We help make sure yours is one of them.</p>
-            <p>Our work is AI search engine optimization, also called generative engine optimisation (GEO). We test the questions your buyers actually ask, find where competitors are cited ahead of you, and fix the website and content gaps that keep you out of the answer.</p>
-            <p>If you are looking for a geo bureau, this is what we do, with dated evidence, clear priorities and honest reporting instead of guaranteed rankings.</p>
+            <p>Zenith Cite works on one problem: your AI visibility. People now ask ChatGPT, Perplexity, Gemini or Google AI Overviews which company to pick, and the three or four names in that answer become the shortlist. If you are not one of them, most of those buyers never reach your website.</p>
+            <p>The work is AI search engine optimization, which you will also see called generative engine optimisation (GEO). In practice we ask the AI tools the same questions your buyers ask, note who gets named and which pages get cited, and then fix the gaps on your site that explain why it is not you.</p>
+            <p>If you are looking for a geo bureau, that is the service. You get dated screenshots, a short list of what to fix first, and reporting that shows what moved. We do not promise rankings, because nobody can.</p>
           </div>
         </div>
       </section>
@@ -410,9 +407,9 @@
           <p class="eyebrow">The question</p>
           <div class="problem-copy">
             <h2 class="display section-title">Does your brand appear in ChatGPT's answer?</h2>
-            <p class="question">When someone asks AI for a business like yours, what do they see?</p>
-            <p>A recommendation for your competitor? An outdated description of your services? An answer that leaves you out entirely?</p>
-            <p>We investigate the questions your customers might ask and show you what appears, with dated examples and a clear explanation of what we found.</p>
+            <p class="question">When someone asks AI for a business like yours, what comes back?</p>
+            <p>Often it is a competitor, a description of your services that is two years out of date, or nothing about you at all.</p>
+            <p>We run the questions your customers ask, save what each platform says on which date, and explain why the answer looks the way it does.</p>
             <a class="button" href="/book/" data-booking-cta="problem">Find out where you stand <span class="arrow">↗</span></a>
           </div>
         </div>
@@ -421,48 +418,47 @@
       <section class="section compare" id="example">
         <p class="eyebrow">What changes</p>
         <h2 class="display section-title">From left out to cited: what the work aims for</h2>
-        <p class="intro">An illustrative example of the same customer question before and after visibility work. The businesses are fictional; real results vary and are never guaranteed.</p>
-        <div class="compare-grid">
-          <article class="answer-card before"><span class="answer-label">Before</span><p class="answer-prompt">“Which accountant in Utrecht is best for a small online shop?”</p><p class="answer-text">Popular options include <strong>Competitor A</strong>, known for e-commerce bookkeeping, and <strong>Competitor B</strong>, which offers fixed monthly fees. Both have strong reviews.</p><ul class="answer-sources" aria-label="Sources cited"><li>competitor-a.example</li><li>review-site.example</li><li>directory.example</li></ul></article>
-          <article class="answer-card after"><span class="answer-label">After</span><p class="answer-prompt">“Which accountant in Utrecht is best for a small online shop?”</p><p class="answer-text">Options include <strong>Your Business</strong>, which specialises in web shops and publishes fixed packages from €95 a month, and <strong>Competitor A</strong>. Your Business is frequently praised for VAT support for EU sales.</p><ul class="answer-sources" aria-label="Sources cited"><li class="yours">your-business.example/webshops</li><li>review-site.example</li><li>directory.example</li></ul></article>
+        <p class="intro">One customer question, asked before and after visibility work. The businesses are made up for this example. Real results vary and are not guaranteed.</p>
+        <div class="v-ba" role="img" aria-label="Illustrative before and after: before, ChatGPT lists Clinic A, Clinic B and Clinic C and does not mention Your Practice. After, Your Practice is listed first.">
+          <div class="v-card v-panel"><h3>Before</h3><p class="v-q">Who are the best physiotherapists in Amsterdam?</p><div class="v-inner"><div class="v-head"><svg class="v-ic" aria-hidden="true"><use href="#ic-chatgpt"/></svg>ChatGPT</div><p class="v-text">Based on reviews and available information, here are some of the best physiotherapists in Amsterdam:</p><ol class="v-list"><li>Clinic A</li><li>Clinic B</li><li>Clinic C</li></ol></div><span class="v-missing">Your Practice: not mentioned</span></div>
+          <div class="v-arrow" aria-hidden="true">→</div>
+          <div class="v-card v-panel"><h3>After</h3><p class="v-q">Who are the best physiotherapists in Amsterdam?</p><div class="v-inner"><div class="v-head"><svg class="v-ic" aria-hidden="true"><use href="#ic-chatgpt"/></svg>ChatGPT</div><p class="v-text">Based on reviews and available information, here are some of the best physiotherapists in Amsterdam:</p><ol class="v-list"><li class="you">Your Practice<span class="v-badge">↑ #1</span></li><li>Clinic A</li><li>Clinic B</li></ol></div></div>
         </div>
-        <p class="compare-note">What changed in this example: a dedicated service page for web shops, published prices, consistent directory listings and more recent reviews. These are the kinds of changes we recommend, based on what the answers actually cite.</p>
+        <p class="compare-note">What changed in this example: a page for each treatment, published prices, consistent directory listings and more recent reviews. Each change came from looking at what the answer cited, which is how we decide what to recommend.</p>
       </section>
 
       <section class="section approach" id="approach">
         <p class="eyebrow">Our approach</p>
         <h2 class="display section-title">how our geo bureau helps customers find you in ai search</h2>
-        <p class="intro">We document what we test, connect every recommendation to an observed gap, and explain limitations plainly so you can make the next decision with confidence.</p>
-        <div class="steps">
-          <article class="step"><span class="step-number">01</span><h3 class="display">understand your starting point</h3><div class="step-copy"><p>We test 15–20 relevant customer questions across four platforms and compare your visibility with named competitors.</p><p>You see the questions, the answers, the cited sources, and the gaps worth investigating.</p></div></article>
-          <article class="step"><span class="step-number">02</span><h3 class="display">improve what customers and search systems find</h3><div class="step-copy"><p>We address agreed technical issues, clarify your business information, and improve content around the questions buyers need answered.</p><p>Every recommendation connects to a specific issue on your website or in your public business information.</p></div></article>
-          <article class="step"><span class="step-number">03</span><h3 class="display">measure what changes</h3><div class="step-copy"><p>We repeat the checks, document changes, and explain the next priorities.</p><p>Where tracking allows, we also connect visibility work with website visits and inquiries.</p></div></article>
-        </div>
+        <p class="intro">Every recommendation points back to something we saw in an answer. We write down what we tested and when, and we tell you what the data cannot show, so you know how much weight to give it.</p>
+        <div class="v-steps"><article class="v-card v-step"><span class="num">01</span><h3>Audit</h3><p class="v-sub"><strong>Understand your starting point.</strong></p><p>We test 15–20 relevant customer questions across four platforms and compare your visibility with named competitors.</p><p>You see every question, every answer and every source the answer cited.</p><div class="v-art" aria-hidden="true"><span class="v-tile" style="left:0;top:18px"><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-chatgpt"/></svg></span><span class="v-tile" style="left:0;top:74px"><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-perplexity"/></svg></span><span class="v-tile" style="left:0;top:130px"><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-google"/></svg></span><div class="v-doc"><i></i><i></i><i></i><i></i></div><span class="v-lens"></span></div></article><article class="v-card v-step"><span class="num">02</span><h3>Implement</h3><p class="v-sub"><strong>Improve what customers and search systems find.</strong></p><p>We fix the technical issues we agreed on, tidy up your business details, and rewrite or add pages around the questions buyers ask.</p><p>Nothing goes on the list unless we can point to the page or listing it fixes.</p><div class="v-art" aria-hidden="true"><span class="v-code">&lt;schema&gt;<br>&nbsp;&nbsp;"@type": "Physiotherapy"</span><span class="v-braces">{ }</span><div class="v-win"><b></b><i></i><i></i><i></i></div></div></article><article class="v-card v-step"><span class="num">03</span><h3>Monitor</h3><p class="v-sub"><strong>Measure what changes.</strong></p><p>We run the same questions again and write down what changed.</p><p>If your analytics are set up for it, we also show visits and enquiries that came from AI tools.</p><div class="v-art" aria-hidden="true"><div class="v-icons"><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-chatgpt"/></svg><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-gemini"/></svg><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-perplexity"/></svg><svg class="v-ic" style="width:24px;height:24px" aria-hidden="true"><use href="#ic-google"/></svg></div><div class="v-chart"><small>Citations over time</small><div class="v-bars"><span style="height:20%"></span><span style="height:28%"></span><span style="height:34%"></span><span style="height:46%"></span><span style="height:58%"></span><span style="height:72%"></span><span style="height:90%"></span></div></div></div></article></div>
       </section>
 
       <section class="section deliverables" id="deliverables">
         <p class="eyebrow">What you get</p><h2 class="display section-title as-written">what's in an AI visibility audit</h2>
+        <div class="v-card v-dash" role="img" aria-label="Example monthly report with illustrative figures: mentions per platform out of 20 questions, citation share of 34 percent for Your Practice, and competitor shares."><div class="v-side" aria-hidden="true"><strong>zenith</strong><span class="on">Overview</span><span>AI visibility</span><span>Competitors</span><span>Content</span><span>Reports</span></div><div class="v-dmain"><div class="v-dtop"><h3>AI visibility report</h3><span class="v-chip">Example data</span></div><div class="v-stats"><div class="v-stat"><svg class="v-ic" style="width:26px;height:26px" aria-hidden="true"><use href="#ic-chatgpt"/></svg><div><small>ChatGPT</small><b>7</b><em> / 20</em><small>mentions</small></div></div><div class="v-stat"><svg class="v-ic" style="width:26px;height:26px" aria-hidden="true"><use href="#ic-perplexity"/></svg><div><small>Perplexity</small><b>11</b><em> / 20</em><small>mentions</small></div></div><div class="v-stat"><svg class="v-ic" style="width:26px;height:26px" aria-hidden="true"><use href="#ic-gemini"/></svg><div><small>Gemini</small><b>5</b><em> / 20</em><small>mentions</small></div></div><div class="v-stat"><svg class="v-ic" style="width:26px;height:26px" aria-hidden="true"><use href="#ic-google"/></svg><div><small>Google AI</small><b>8</b><em> / 20</em><small>mentions</small></div></div></div><div class="v-split"><div class="v-share"><h4>Citation share</h4><p>Your share of AI recommendations</p><div class="v-big">34%</div><div class="v-track"><span style="width:34%"></span></div></div><div class="v-rows"><div class="v-row you"><span>Your Practice</span><i><span style="width:85.0%"></span></i><span>34%</span></div><div class="v-row"><span>Clinic A</span><i><span style="width:65.0%"></span></i><span>26%</span></div><div class="v-row"><span>Clinic B</span><i><span style="width:45.0%"></span></i><span>18%</span></div><div class="v-row"><span>Clinic C</span><i><span style="width:30.0%"></span></i><span>12%</span></div><div class="v-row"><span>Others</span><i><span style="width:25.0%"></span></i><span>10%</span></div></div></div></div></div>
+        <p class="v-caption">Example report with made-up figures. Yours is built from your own customer questions and competitors.</p>
         <div class="deliverable-grid">
-          <article class="deliverable"><span class="deliverable-icon">01</span><h3>An evidence-backed visibility audit</h3><p>Review actual answers and screenshots, with the testing date and context recorded.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">02</span><h3>See where competitors get considered ahead of you</h3><p>Understand which businesses appear in the questions we test and which sources the answers reference.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">03</span><h3>Focus your effort on the changes that matter</h3><p>Receive a clear list of technical and content changes, ordered by their likely usefulness and implementation effort.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">04</span><h3>Help buyers understand why you’re a fit</h3><p>Help prospective customers understand your services, compare their options, and decide whether your business fits their needs.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">05</span><h3>See what changed—and what to do next</h3><p>See completed work, changes in the tested answers, and the priorities for the next month.</p></article>
-          <article class="deliverable"><span class="deliverable-icon">06</span><h3>Direct communication</h3><p>Work directly with the people responsible for your strategy and implementation.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">01</span><h3>A visibility audit with screenshots</h3><p>The real answers, saved with the date, platform and exact question.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">02</span><h3>Who gets named instead of you</h3><p>Which competitors show up for each question, and which websites the answers lean on.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">03</span><h3>A fix list in order</h3><p>Technical and content changes, sorted by how much they are likely to help and how much work they take.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">04</span><h3>Pages that answer buyer questions</h3><p>Content that tells a buyer what you do, what it costs and who it suits, so they can compare you properly.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">05</span><h3>A monthly report</h3><p>What we did, how the answers changed, and what we plan to do next month.</p></article>
+          <article class="deliverable"><span class="deliverable-icon">06</span><h3>No account managers</h3><p>You talk to the person who runs the tests and does the work.</p></article>
         </div>
       </section>
 
       <section class="section fit" id="about">
-        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">Who we help: SaaS, e-commerce, local services</h2></div><div class="fit-copy"><p>Zenith works with founders and marketing teams whose customers compare providers, explore specialist services, or research who to trust.</p><p>The best starting point is an established website, a clear offer, and the ability to implement improvements.</p><nav class="fit-industries" aria-label="Industries"><a href="/industries/dental-clinics/">Dental clinics</a><a href="/industries/law-firms/">Law firms</a><a href="/industries/real-estate/">Real estate</a><a href="/industries/ecommerce/">E-commerce</a><a href="/industries/saas/">SaaS</a><a href="/industries/">All industries</a></nav><a class="button" href="/book/" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
+        <div class="fit-card"><div><p class="eyebrow">Who it’s for</p><h2 class="display section-title">Who we help: SaaS, e-commerce, local services</h2></div><div class="fit-copy"><p>Zenith suits founders and marketing teams in markets where customers compare a few providers before they pick one.</p><p>It works best if you already have a website with real content, a clear offer, and someone who can make changes to the site.</p><nav class="fit-industries" aria-label="Industries"><a href="/industries/dental-clinics/">Dental clinics</a><a href="/industries/law-firms/">Law firms</a><a href="/industries/real-estate/">Real estate</a><a href="/industries/ecommerce/">E-commerce</a><a href="/industries/saas/">SaaS</a><a href="/industries/">All industries</a></nav><a class="button" href="/book/" data-booking-cta="about">Discuss your website <span class="arrow">↗</span></a></div></div>
       </section>
 
       <section class="section pricing" id="pricing">
         <p class="eyebrow">Pricing</p><h2 class="display section-title">ai search engine optimization plans and pricing</h2>
         <div class="pricing-grid">
-          <article class="plan"><h3 class="plan-name">Audit — Know where you stand.</h3><p class="plan-price">€750 · one-time</p><p class="plan-description">Understand your visibility gaps and leave with a prioritised action plan.</p><ul><li>15–20 customer questions tested across four platforms</li><li>Comparison with named competitors</li><li>Dated examples and screenshots</li><li>Prioritised recommendations</li><li>Delivery within 48–72 hours after we receive the required information</li></ul><a class="button" href="/book/?interest=visibility-audit" data-booking-cta="pricing" data-interest="visibility-audit">Discuss your audit <span class="arrow">↗</span></a></article>
-          <article class="plan featured"><span class="plan-badge">Recommended</span><h3 class="plan-name">Growth — Put the plan into action.</h3><p class="plan-price">€1,500 / month</p><p class="plan-description">Improve your website and content so potential customers can find and evaluate your business.</p><ul><li>Initial visibility audit</li><li>Agreed schema and technical improvements</li><li>Two optimised content pieces per month</li><li>Monthly visibility re-audit</li><li>Clear progress reporting</li></ul><a class="button" href="/book/?interest=growth" data-booking-cta="pricing" data-interest="growth">Discuss Growth <span class="arrow">↗</span></a></article>
-          <article class="plan"><h3 class="plan-name">Authority — Expand your presence.</h3><p class="plan-price">€2,800 / month</p><p class="plan-description">Cover more buying questions and pursue relevant third-party mentions.</p><ul><li>Everything in Growth</li><li>Four or more content pieces per month, scoped in advance</li><li>Outreach for relevant third-party mentions and digital PR opportunities</li><li>Priority support and strategy calls</li></ul><a class="button" href="/book/?interest=authority" data-booking-cta="pricing" data-interest="authority">Discuss Authority <span class="arrow">↗</span></a></article>
-          <article class="plan"><h3 class="plan-name">Custom — Multiple sites or markets.</h3><p class="plan-price">Quote on request</p><p class="plan-description">For groups with several websites, brands, languages or countries that need one coordinated programme.</p><ul><li>Several websites, brands or locations in one plan</li><li>English and Dutch questions tested side by side</li><li>Scope, deliverables and timeline set out in a written proposal</li><li>Quarterly strategy reviews</li><li>Fixed monthly price once the scope is agreed</li></ul><a class="button" href="/book/?interest=custom" data-booking-cta="pricing" data-interest="custom">Request a quote <span class="arrow">↗</span></a></article>
+          <article class="plan"><h3 class="plan-name">Audit</h3><p class="plan-price">€750 · one-time</p><p class="plan-description">Find out where you stand and get a fix list in priority order.</p><ul><li>15–20 customer questions tested across four platforms</li><li>Comparison with named competitors</li><li>Dated examples and screenshots</li><li>Prioritised recommendations</li><li>Delivery within 48–72 hours after we receive the required information</li></ul><a class="button" href="/book/?interest=visibility-audit" data-booking-cta="pricing" data-interest="visibility-audit">Discuss your audit <span class="arrow">↗</span></a></article>
+          <article class="plan featured"><span class="plan-badge">Recommended</span><h3 class="plan-name">Growth</h3><p class="plan-price">€1,500 / month</p><p class="plan-description">We do the work from the audit, month by month, and measure what it changes.</p><ul><li>Initial visibility audit</li><li>Agreed schema and technical improvements</li><li>Two optimised content pieces per month</li><li>Monthly visibility re-audit</li><li>Clear progress reporting</li></ul><a class="button" href="/book/?interest=growth" data-booking-cta="pricing" data-interest="growth">Discuss Growth <span class="arrow">↗</span></a></article>
+          <article class="plan"><h3 class="plan-name">Authority</h3><p class="plan-price">€2,800 / month</p><p class="plan-description">More content, plus outreach to get you mentioned on the sites AI answers already cite.</p><ul><li>Everything in Growth</li><li>Four or more content pieces per month, scoped in advance</li><li>Outreach for relevant third-party mentions and digital PR opportunities</li><li>Priority support and strategy calls</li></ul><a class="button" href="/book/?interest=authority" data-booking-cta="pricing" data-interest="authority">Discuss Authority <span class="arrow">↗</span></a></article>
+          <article class="plan"><h3 class="plan-name">Custom</h3><p class="plan-price">Quote on request</p><p class="plan-description">For groups with several websites, brands, languages or countries that want one plan covering all of them.</p><ul><li>Several websites, brands or locations in one plan</li><li>English and Dutch questions tested side by side</li><li>Scope, deliverables and timeline set out in a written proposal</li><li>Quarterly strategy reviews</li><li>Fixed monthly price once the scope is agreed</li></ul><a class="button" href="/book/?interest=custom" data-booking-cta="pricing" data-interest="custom">Request a quote <span class="arrow">↗</span></a></article>
         </div>
         <p class="scope-note">All prices are in euros and include taxes. We agree on the scope before work begins. Monthly plans start with a three-month minimum term, then continue month to month with 30 days’ notice. We reply to every audit or quote request within one business day. Search rankings, AI recommendations, and third-party placements are not guaranteed.</p>
         <nav class="related-links" aria-label="Related services"><a class="related-link" href="/ai-visibility-audit/">Explore the AI visibility audit <span>↗</span></a><a class="related-link" href="/generative-engine-optimisation/">Explore GEO services <span>↗</span></a></nav>
@@ -470,22 +466,22 @@
 
       <section class="section faqs" id="faqs">
         <div class="faq-layout"><div><p class="eyebrow">FAQs</p><h2 class="display section-title">AI visibility FAQ</h2></div><div class="faq-list">
-          <details open><summary>What is AI visibility?</summary><div class="answer"><p>AI visibility describes whether and how your business appears in AI-generated answers. That can include a brand mention, a recommendation, or a link to your website.</p><p>These are different outcomes, and we report them separately.</p></div></details>
-          <details><summary>What is generative engine optimisation?</summary><div class="answer"><p>Generative engine optimisation, often called GEO, is the practice of improving how a business can be discovered and represented in AI-generated answers.</p><p>Our work focuses on useful content, clear business information, technical accessibility, and documented testing.</p></div></details>
-          <details><summary>Is this different from SEO?</summary><div class="answer"><p>The work overlaps substantially. A technically accessible website and useful, reliable content support traditional search and Google’s AI search features.</p><p>Our service adds testing of AI-generated answers and competitor visibility to help identify further priorities.</p></div></details>
-          <details><summary>Can you guarantee that ChatGPT will recommend my business?</summary><div class="answer"><p>No. AI platforms control their answers, and those answers can vary between searches and users.</p><p>We commit to an agreed scope of work and transparent reporting.</p></div></details>
-          <details><summary>How quickly will I see results?</summary><div class="answer"><p>The audit provides an initial picture within 48–72 hours after the required information is received.</p><p>Changes in search visibility take longer and depend on your website, competition, implementation, and the platforms themselves. We establish a baseline and track progress over time.</p></div></details>
-          <details><summary>Do I need a new website?</summary><div class="answer"><p>Usually, we begin by assessing your existing website. We identify which changes can be made within your current setup before recommending a rebuild.</p></div></details>
-          <details><summary>What happens during the free snapshot?</summary><div class="answer"><p>We explore three relevant customer questions in ChatGPT and Google, discuss what appears, and explain whether a full audit would be useful.</p><p>It is a short initial review, separate from the paid audit.</p></div></details>
-          <details><summary>Is there a minimum contract?</summary><div class="answer"><p>Growth and Authority start with a three-month minimum term, which gives technical and content changes time to take effect.</p><p>After that, plans continue month to month and can be cancelled with 30 days’ notice. The audit is a one-time purchase with no ongoing commitment.</p></div></details>
-          <details><summary>How will we track progress?</summary><div class="answer"><p>Each month you receive a written report showing the work completed, the re-tested customer questions, and any changes in mentions, recommendations and cited links.</p><p>Where your analytics allow it, we also report visits and enquiries from AI platforms and search.</p></div></details>
-          <details><summary>How do I get a quote?</summary><div class="answer"><p>Use the booking form and choose “Custom quote” as your interest. Tell us about your websites, markets and goals, and we reply within one business day with next steps or a written proposal.</p></div></details>
-          <details><summary>Which markets do you cover?</summary><div class="answer"><p>We work remotely with businesses across the European Union. We test customer questions in English and Dutch, and compare answers between countries where that matters.</p><p>Programmes covering several countries are scoped as a Custom plan. See <a href="/europe/">working across the EU</a>.</p></div></details>
+          <details open><summary>What is AI visibility?</summary><div class="answer"><p>AI visibility is whether your business shows up when someone asks an AI tool for help, and how it is described when it does. Showing up can mean a passing mention, a recommendation, or a link to your site.</p><p>Those are different results, so we count them separately.</p></div></details>
+          <details><summary>What is generative engine optimisation?</summary><div class="answer"><p>Generative engine optimisation, or GEO, is work that makes it easier for AI tools to find your business and describe it correctly.</p><p>For us that means useful pages, consistent business details, a site that crawlers can read, and testing that is written down.</p></div></details>
+          <details><summary>Is this different from SEO?</summary><div class="answer"><p>Mostly it is the same work. A site that loads, can be crawled and answers real questions does well in normal search and in Google’s AI features.</p><p>What we add is testing the AI answers themselves and comparing you with named competitors, which shows gaps a normal SEO report misses.</p></div></details>
+          <details><summary>Can you guarantee that ChatGPT will recommend my business?</summary><div class="answer"><p>No. The AI companies decide what their tools say, and the answer to the same question changes between people and days.</p><p>What we can promise is the work we agree on and an honest report on what it did.</p></div></details>
+          <details><summary>How quickly will I see results?</summary><div class="answer"><p>The audit is ready 48–72 hours after we have what we need from you.</p><p>Changes in the answers take longer, usually weeks to months, depending on your site, your competitors and the platforms. That is why we measure a starting point first and track from there.</p></div></details>
+          <details><summary>Do I need a new website?</summary><div class="answer"><p>Usually not. We start with the site you have and work out what can be fixed inside it before anyone mentions a rebuild.</p></div></details>
+          <details><summary>What happens during the free snapshot?</summary><div class="answer"><p>We ask ChatGPT and Google three questions your customers would ask, look at the answers together, and tell you whether a full audit is worth it.</p><p>It is a short first look and separate from the paid audit.</p></div></details>
+          <details><summary>Is there a minimum contract?</summary><div class="answer"><p>Growth and Authority run for at least three months, because technical and content changes need that long to show up.</p><p>After that you go month to month with 30 days’ notice. The audit is a one-off payment with nothing ongoing.</p></div></details>
+          <details><summary>How will we track progress?</summary><div class="answer"><p>Every month you get a written report: what we did, the same customer questions asked again, and any change in mentions, recommendations and cited links.</p><p>If your analytics allow it, we add visits and enquiries that came from AI tools and search.</p></div></details>
+          <details><summary>How do I get a quote?</summary><div class="answer"><p>Fill in the booking form and pick “Custom quote”. Tell us about your sites, markets and goals. We reply within one business day, either with questions or with a written proposal.</p></div></details>
+          <details><summary>Which markets do you cover?</summary><div class="answer"><p>We work remotely with businesses anywhere in the European Union. We test in English and Dutch, and compare answers between countries when that matters for you.</p><p>Plans that cover several countries are quoted as a Custom plan. See <a href="/europe/">working across the EU</a>.</p></div></details>
         </div></div>
       </section>
 
       <section class="section final-cta" id="book">
-        <p class="eyebrow">Free 15-minute snapshot</p><h2 class="display section-title">Book your free AI visibility snapshot</h2><p class="intro">Bring your website. We’ll bring the questions.</p><p class="intro">Book a free 15-minute visibility snapshot to explore how your business appears when customers ask AI for recommendations.</p><a class="button" href="/book/" data-booking-cta="final-cta">Book your free visibility snapshot <span class="arrow">↗</span></a><p class="snapshot-note">15 minutes · No payment required</p>
+        <p class="eyebrow">Free 15-minute snapshot</p><h2 class="display section-title">Book your free AI visibility snapshot</h2><p class="intro">Bring your website. We’ll bring the questions.</p><p class="intro">In 15 minutes we ask three of your customers’ questions live and look at what comes back. No cost, and no pitch unless you ask for one.</p><a class="button" href="/book/" data-booking-cta="final-cta">Book your free visibility snapshot <span class="arrow">↗</span></a><p class="snapshot-note">15 minutes · No payment required</p>
       </section>
     </main>
 
