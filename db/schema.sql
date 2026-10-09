@@ -1,10 +1,10 @@
 create table if not exists public.booking_requests (
   id uuid primary key default gen_random_uuid(),
-  name text not null check (char_length(name) between 1 and 120),
+  name text check (name is null or char_length(name) between 1 and 120),
   email text not null check (char_length(email) between 3 and 320),
-  business_name text not null check (char_length(business_name) between 1 and 180),
+  business_name text check (business_name is null or char_length(business_name) between 1 and 180),
   website text not null check (char_length(website) between 4 and 2048),
-  problem text not null check (char_length(problem) between 1 and 3000),
+  problem text check (problem is null or char_length(problem) between 1 and 3000),
   competitor text check (competitor is null or char_length(competitor) <= 300),
   interest text not null default 'snapshot' check (interest in ('snapshot', 'visibility-audit', 'growth', 'authority', 'custom')),
   budget text check (budget is null or budget in ('under-1500', '1500-3000', '3000-6000', '6000-plus', 'one-time')),
@@ -21,6 +21,11 @@ alter table public.booking_requests
 alter table public.booking_requests drop constraint if exists booking_requests_interest_check;
 alter table public.booking_requests add constraint booking_requests_interest_check
   check (interest in ('snapshot', 'visibility-audit', 'growth', 'authority', 'custom'));
+
+-- The booking form only collects website, email and interest.
+alter table public.booking_requests alter column name drop not null;
+alter table public.booking_requests alter column business_name drop not null;
+alter table public.booking_requests alter column problem drop not null;
 
 create index if not exists booking_requests_created_at_idx
   on public.booking_requests (created_at desc);

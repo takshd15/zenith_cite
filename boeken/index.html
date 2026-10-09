@@ -136,13 +136,9 @@
             <h1>Plan je gratis AI-zichtbaarheid snapshot</h1>
             <p class="time-meta">Gratis, 15 minuten, drie echte klantvragen. Prijs nodig voor meerdere websites of landen? Kies “Offerte op maat”. We reageren binnen één werkdag.</p>
             <form id="booking-details" action="/api/booking-request" method="post">
-              <div class="field-row"><label>Je naam<input id="name" name="name" autocomplete="name" required></label>
+              <div class="field-row"><label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label>
               <label>Zakelijk e-mailadres<input id="email" name="email" type="email" autocomplete="email" required></label></div>
-              <div class="field-row"><label>Bedrijfsnaam<input id="business" name="business" autocomplete="organization" required></label>
-              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label></div>
-              <label>Waar loop je tegenaan?<textarea id="problem" name="problem" placeholder="Waarvoor moeten klanten je vinden? Noem een concurrent als je een vergelijking wilt." required></textarea></label>
-              <div class="field-row"><label>Interesse in<select id="interest" name="interest"><option value="snapshot">Gratis snapshot</option><option value="visibility-audit">AI-zichtbaarheid audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Offerte op maat</option></select></label>
-              <label>Maandbudget (optioneel)<select id="budget" name="budget"><option value="">Zeg ik liever niet</option><option value="under-1500">Minder dan €1.500 / maand</option><option value="1500-3000">€1.500 – €3.000 / maand</option><option value="3000-6000">€3.000 – €6.000 / maand</option><option value="6000-plus">€6.000+ / maand</option><option value="one-time">Alleen een eenmalige audit</option></select></label></div>
+              <label>Interesse in<select id="interest" name="interest"><option value="snapshot">Gratis snapshot</option><option value="visibility-audit">AI-zichtbaarheid audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Offerte op maat</option></select></label>
               <input id="timezone-field" name="timezone" type="hidden">
               <button class="button" id="submit-button" type="submit">Stuur mij de boekingslink <span>↗</span></button>
               <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>

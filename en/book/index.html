@@ -136,13 +136,9 @@
             <h1>Book your free AI visibility snapshot</h1>
             <p class="time-meta">Free, 15 minutes, three real customer questions. Need pricing for several sites or markets? Choose “Custom quote”. We reply within one business day.</p>
             <form id="booking-details" action="/api/booking-request" method="post">
-              <div class="field-row"><label>Your name<input id="name" name="name" autocomplete="name" required></label>
-              <label>Work email<input id="email" name="email" type="email" autocomplete="email" required></label></div>
-              <div class="field-row"><label>Business name<input id="business" name="business" autocomplete="organization" required></label>
-              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label></div>
-              <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="What should customers find you for? Mention a competitor if you want a comparison." required></textarea></label>
-              <div class="field-row"><label>Interested in<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
-              <label>Monthly budget (optional)<select id="budget" name="budget"><option value="">Prefer not to say</option><option value="under-1500">Under €1,500 / month</option><option value="1500-3000">€1,500 – €3,000 / month</option><option value="3000-6000">€3,000 – €6,000 / month</option><option value="6000-plus">€6,000+ / month</option><option value="one-time">One-time audit only</option></select></label></div>
+              <div class="field-row"><label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label>
+              <label>Business email<input id="email" name="email" type="email" autocomplete="email" required></label></div>
+              <label>Interested in<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
               <input id="timezone-field" name="timezone" type="hidden">
               <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
               <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
