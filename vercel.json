@@ -15,128 +15,123 @@
       "permanent": true
     },
     {
-      "source": "/about",
+      "source": "/about/",
       "destination": "/en/about/",
       "permanent": true
     },
     {
-      "source": "/ai-visibility-audit",
+      "source": "/ai-visibility-audit/",
       "destination": "/en/ai-visibility-audit/",
       "permanent": true
     },
     {
-      "source": "/generative-engine-optimisation",
+      "source": "/generative-engine-optimisation/",
       "destination": "/en/generative-engine-optimisation/",
       "permanent": true
     },
     {
-      "source": "/ai-seo",
+      "source": "/ai-seo/",
       "destination": "/en/ai-seo/",
       "permanent": true
     },
     {
-      "source": "/ai-findability",
+      "source": "/ai-findability/",
       "destination": "/en/ai-findability/",
       "permanent": true
     },
     {
-      "source": "/chatgpt-visibility",
+      "source": "/chatgpt-visibility/",
       "destination": "/en/chatgpt-visibility/",
       "permanent": true
     },
     {
-      "source": "/perplexity-optimization",
+      "source": "/perplexity-optimization/",
       "destination": "/en/perplexity-optimization/",
       "permanent": true
     },
     {
-      "source": "/white-label-geo",
+      "source": "/white-label-geo/",
       "destination": "/en/white-label-geo/",
       "permanent": true
     },
     {
-      "source": "/europe",
+      "source": "/europe/",
       "destination": "/en/europe/",
       "permanent": true
     },
     {
-      "source": "/industries",
+      "source": "/industries/",
       "destination": "/en/industries/",
       "permanent": true
     },
     {
-      "source": "/industries/dental-clinics",
+      "source": "/industries/dental-clinics/",
       "destination": "/en/industries/dental-clinics/",
       "permanent": true
     },
     {
-      "source": "/industries/law-firms",
+      "source": "/industries/law-firms/",
       "destination": "/en/industries/law-firms/",
       "permanent": true
     },
     {
-      "source": "/industries/real-estate",
+      "source": "/industries/real-estate/",
       "destination": "/en/industries/real-estate/",
       "permanent": true
     },
     {
-      "source": "/industries/ecommerce",
+      "source": "/industries/ecommerce/",
       "destination": "/en/industries/ecommerce/",
       "permanent": true
     },
     {
-      "source": "/industries/saas",
+      "source": "/industries/saas/",
       "destination": "/en/industries/saas/",
       "permanent": true
     },
     {
-      "source": "/insights",
+      "source": "/insights/",
       "destination": "/en/insights/",
       "permanent": true
     },
     {
-      "source": "/insights/check-business-in-chatgpt",
+      "source": "/insights/check-business-in-chatgpt/",
       "destination": "/en/insights/check-business-in-chatgpt/",
       "permanent": true
     },
     {
-      "source": "/insights/geo-and-seo-measurement",
+      "source": "/insights/geo-and-seo-measurement/",
       "destination": "/en/insights/geo-and-seo-measurement/",
       "permanent": true
     },
     {
-      "source": "/insights/what-an-ai-visibility-audit-includes",
+      "source": "/insights/what-an-ai-visibility-audit-includes/",
       "destination": "/en/insights/what-an-ai-visibility-audit-includes/",
       "permanent": true
     },
     {
-      "source": "/insights/why-chatgpt-recommends-your-competitor",
+      "source": "/insights/why-chatgpt-recommends-your-competitor/",
       "destination": "/en/insights/why-chatgpt-recommends-your-competitor/",
       "permanent": true
     },
     {
-      "source": "/book",
+      "source": "/book/",
       "destination": "/en/book/",
       "permanent": true
     },
     {
-      "source": "/privacy",
+      "source": "/privacy/",
       "destination": "/en/privacy/",
       "permanent": true
     },
     {
-      "source": "/terms",
+      "source": "/terms/",
       "destination": "/en/terms/",
       "permanent": true
     },
     {
-      "source": "/nl",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/nl/:path*",
-      "destination": "/:path*",
+      "source": "/nl/:path(.*)",
+      "destination": "/:path",
       "permanent": true
     }
   ],
