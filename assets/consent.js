@@ -43,10 +43,14 @@
     var banner = document.createElement('div');
     banner.className = 'consent-banner';
     banner.setAttribute('role', 'region');
-    banner.setAttribute('aria-label', 'Cookie consent');
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    var t = en
+      ? { label: 'Cookie consent', text: 'We use Google Analytics cookies to understand how visitors use this site. They are only set if you accept.', more: 'Learn more', href: '/en/privacy/#analytics', no: 'Decline', yes: 'Accept' }
+      : { label: 'Cookietoestemming', text: 'We gebruiken cookies van Google Analytics om te begrijpen hoe bezoekers deze site gebruiken. Ze worden alleen geplaatst als je akkoord gaat.', more: 'Meer informatie', href: '/privacybeleid/#analytics', no: 'Weigeren', yes: 'Accepteren' };
+    banner.setAttribute('aria-label', t.label);
     banner.innerHTML =
-      '<p>We use Google Analytics cookies to understand how visitors use this site. They are only set if you accept. <a href="/privacy/#analytics">Learn more</a></p>' +
-      '<div class="consent-actions"><button type="button" class="consent-decline">Decline</button><button type="button" class="consent-accept">Accept</button></div>';
+      '<p>' + t.text + ' <a href="' + t.href + '">' + t.more + '</a></p>' +
+      '<div class="consent-actions"><button type="button" class="consent-decline">' + t.no + '</button><button type="button" class="consent-accept">' + t.yes + '</button></div>';
     banner.querySelector('.consent-accept').addEventListener('click', function () { choose('granted', banner); });
     banner.querySelector('.consent-decline').addEventListener('click', function () { choose('denied', banner); });
     document.body.appendChild(banner);

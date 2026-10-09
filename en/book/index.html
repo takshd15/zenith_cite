@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8N76M7C0E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+    try { if (localStorage.getItem('zenith-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X8N76M7C0E');
+  </script>
+  <script src="/assets/consent.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#14172b">
+  <meta name="description" content="Book a free 15-minute AI visibility snapshot. We check how ChatGPT, Perplexity and Google AI describe your business and show you the gaps to address.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://zenith-cite.com/en/book/">
+  <link rel="alternate" hreflang="nl" href="https://zenith-cite.com/boeken/">
+  <link rel="alternate" hreflang="en" href="https://zenith-cite.com/en/book/">
+  <link rel="alternate" hreflang="x-default" href="https://zenith-cite.com/boeken/">
+  <meta property="og:title" content="Book a Free AI Visibility Snapshot | Zenith Cite">
+  <meta property="og:description" content="Book a free 15-minute AI visibility snapshot. We check how ChatGPT, Perplexity and Google AI describe your business and show you the gaps to address.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenith-cite.com/en/book/">
+  <meta property="og:site_name" content="Zenith Cite">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://zenith-cite.com/zenith-social-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zenith Cite — AI visibility audits, implementation and measurement.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Book a Free AI Visibility Snapshot | Zenith Cite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #14172b;
+      --ink-soft: #1d2140;
+      --cream: #fbf7ec;
+      --white: #fff;
+      --cyan: #5fe0e0;
+      --lavender: #c9b6f2;
+      --pink: #f2a8e0;
+      --mint: #b8f0d8;
+      --graphite: #4b5165;
+      --muted: #8288a0;
+      --line: rgba(20, 23, 43, .15);
+      --pad: clamp(22px, 5.5vw, 76px);
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
+      --duration-fast: 160ms;
+      --duration-base: 220ms;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.55 Inter, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .page { width: min(100%, 1320px); margin-inline: auto; overflow: hidden; }
+    .nav { height: 84px; display: flex; align-items: center; justify-content: space-between; padding-inline: var(--pad); border-bottom: 1px solid var(--line); }
+    .logo { display: inline-flex; align-items: center; gap: 7px; font: 600 22px/1 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .logo::before { content:""; width: 9px; height: 9px; border-radius: 1px; background: currentColor; transform: translateY(-7px); }
+    .back { color: var(--graphite); font-size: 13px; font-weight: 600; }
+    .back:hover { color: var(--ink); }
+    .eyebrow { margin: 0 0 22px; color: var(--graphite); font-size: 12px; font-weight: 600; }
+
+    .booking { padding: clamp(44px, 5vw, 72px) var(--pad); background: var(--white); }
+    .booking-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(45px, 7vw, 95px); align-items: start; }
+    .details-panel { min-width: 0; }
+    h1, h2 { margin: 0 0 12px; font: 600 clamp(35px, 4.2vw, 58px)/1 "Space Grotesk", sans-serif; letter-spacing: -.05em; text-transform: lowercase; }
+    .time-meta { margin: 0 0 26px; color: var(--graphite); font-size: 13px; font-weight: 600; }
+    form { display: grid; gap: 14px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: grid; gap: 7px; color: var(--ink); font-size: 12px; font-weight: 600; }
+    input, select, textarea { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid var(--line); border-radius: 2px; background: var(--cream); color: var(--ink); font: 14px Inter, sans-serif; }
+    textarea { min-height: 92px; padding-block: 13px; resize: vertical; line-height: 1.5; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid var(--cyan); outline-offset: 2px; border-color: var(--ink); }
+    .optional { color: var(--muted); font-weight: 400; }
+    .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 20px; border: 1px solid var(--ink); border-radius: 2px; background: var(--ink); color: var(--white); font: 600 13px Inter, sans-serif; cursor: pointer; transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out); }
+    .button:hover { transform: translateY(-2px); background: var(--ink-soft); }
+    .button:disabled { cursor: wait; opacity: .68; transform: none; }
+    .button:focus-visible, a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+    .privacy-note { margin: 4px 0 0; color: var(--muted); font-size: 10px; }
+    .form-status { min-height: 20px; margin: 0; color: #8b2d46; font-size: 12px; }
+    .next-panel { min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(30px, 4vw, 52px); border: 1px solid var(--line); border-radius: 4px; color: var(--white); background: radial-gradient(95% 70% at 0% 0%, rgba(95,224,224,.24), transparent 66%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.2), transparent 70%), var(--ink); }
+    .next-panel .eyebrow { color: var(--lavender); }
+    .next-panel h2 { max-width: 430px; margin-bottom: 24px; }
+    .next-panel > div > p { max-width: 450px; color: #c3c6d4; }
+    .next-list { margin: 28px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
+    .next-list li { display: grid; grid-template-columns: 32px 1fr; gap: 13px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.2); color: #d7d9e2; font-size: 12px; }
+    .next-list span { color: var(--cyan); font-size: 10px; }
+    .response-time { margin: 24px 0 0; color: #9da1b5; font-size: 11px; }
+    .details-panel, .next-panel { transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
+    .details-panel.is-leaving, .next-panel.is-leaving { opacity: 0; transform: translateY(6px); }
+    .request-confirmed { min-height: 420px; display: none; grid-column: 1 / -1; flex-direction: column; justify-content: center; padding: clamp(32px, 5vw, 64px); border: 1px solid var(--line); background: radial-gradient(90% 70% at 5% 5%, rgba(95,224,224,.56), transparent 70%), radial-gradient(90% 80% at 100% 100%, rgba(242,168,224,.4), transparent 72%), var(--cream); opacity: 0; transform: translateY(6px); transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
+    .request-confirmed.visible { display: flex; }
+    .request-confirmed.visible.is-entered { opacity: 1; transform: translateY(0); }
+    .request-confirmed .check { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 34px; border-radius: 50%; background: var(--ink); color: var(--white); }
+    .request-confirmed h2 { max-width: 560px; }
+    .request-confirmed p { max-width: 580px; color: var(--graphite); }
+    .request-confirmed .submitted-email { color: var(--ink); font-weight: 600; overflow-wrap: anywhere; }
+    [hidden] { display: none !important; }
+    footer { display: flex; justify-content: space-between; gap: 30px; padding: 35px var(--pad); background: var(--ink); color: #c2c5d3; font-size: 11px; }
+    footer .logo { color: var(--white); }
+
+    @media (max-width: 900px) {
+      .booking-grid { grid-template-columns: 1fr; }
+      .booking-grid { gap: 55px; }
+      }
+    @media (max-width: 600px) {
+      .nav { height: 72px; }
+      .booking { padding-inline: 18px; }
+      .field-row { grid-template-columns: 1fr; }
+      .request-confirmed { min-height: 360px; }
+      footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+  <link rel="stylesheet" href="/assets/site-footer.css">
+</head>
+<body>
+  <div class="page">
+    <header><nav class="nav" aria-label="Booking navigation"><a class="logo" href="/en/">zenith cite</a><div class="nav-end"><div class="lang-switch" role="group" aria-label="Taal / Language"><a href="/boeken/" hreflang="nl" lang="nl">NL</a><a href="/en/book/" hreflang="en" lang="en" aria-current="true">EN</a></div><a class="back" href="/en/">← Back to website</a></div><!--/nav-end--></nav></header>
+    <main>
+      <section class="booking" id="request-link">
+        <div class="booking-grid">
+          <div class="details-panel" id="form-panel">
+            <p class="eyebrow">Request your invitation</p>
+            <h1>Book your free AI visibility snapshot</h1>
+            <p class="time-meta">Free, 15 minutes, three real customer questions. Need pricing for several sites or markets? Choose “Custom quote”. We reply within one business day.</p>
+            <form id="booking-details" action="/api/booking-request" method="post">
+              <div class="field-row"><label>Your name<input id="name" name="name" autocomplete="name" required></label>
+              <label>Work email<input id="email" name="email" type="email" autocomplete="email" required></label></div>
+              <div class="field-row"><label>Business name<input id="business" name="business" autocomplete="organization" required></label>
+              <label>Website<input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></label></div>
+              <label>What problem are you facing?<textarea id="problem" name="problem" placeholder="What should customers find you for? Mention a competitor if you want a comparison." required></textarea></label>
+              <div class="field-row"><label>Interested in<select id="interest" name="interest"><option value="snapshot">Free visibility snapshot</option><option value="visibility-audit">Visibility Audit</option><option value="growth">Growth</option><option value="authority">Authority</option><option value="custom">Custom quote</option></select></label>
+              <label>Monthly budget (optional)<select id="budget" name="budget"><option value="">Prefer not to say</option><option value="under-1500">Under €1,500 / month</option><option value="1500-3000">€1,500 – €3,000 / month</option><option value="3000-6000">€3,000 – €6,000 / month</option><option value="6000-plus">€6,000+ / month</option><option value="one-time">One-time audit only</option></select></label></div>
+              <input id="timezone-field" name="timezone" type="hidden">
+              <button class="button" id="submit-button" type="submit">Email me the booking link <span>↗</span></button>
+              <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
+              <p class="privacy-note">We use these details to prepare and to email your Calendly link. <a href="/en/privacy/">Privacy policy</a>.</p>
+            </form>
+          </div>
+
+          <aside class="next-panel" id="next-panel">
+            <div><p class="eyebrow">What happens next</p><h2>check your inbox. choose your time.</h2><p>Once we receive your details, we’ll email you the private Calendly link for the free snapshot.</p><ul class="next-list"><li><span>01</span>Submit your business context</li><li><span>02</span>Receive the booking link by email</li><li><span>03</span>Choose the 15-minute time that suits you</li></ul></div>
+            <p class="response-time">We reply to every request within one business day. No obligation and no hard sell.</p>
+          </aside>
+
+          <div class="request-confirmed" id="request-confirmed" role="status" aria-live="polite">
+            <span class="check">✓</span>
+            <p class="eyebrow">Request received</p>
+            <h2>your booking link is on its way.</h2>
+            <p>We’ll send the Calendly link to <span class="submitted-email" id="submitted-email"></span>. Use it to choose your preferred 15-minute slot.</p>
+            <p>If it does not arrive, check your spam or promotions folder before submitting another request.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer site-footer-slim"><div class="site-footer-bottom"><span>© 2026 Zenith Cite · <a href="mailto:takshdange@gmail.com">takshdange@gmail.com</a></span><nav class="site-footer-legal" aria-label="Legal"><a href="/en/">Home</a><a href="/en/privacy/">Privacy policy</a><a href="/en/terms/">Website terms</a><a href="#" data-cookie-settings>Cookie settings</a></nav></div></footer>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var allowedInterests = ['snapshot', 'visibility-audit', 'growth', 'authority', 'custom'];
+      var requestedInterest = params.get('interest');
+      var interest = allowedInterests.indexOf(requestedInterest) >= 0 ? requestedInterest : 'snapshot';
+      var form = document.getElementById('booking-details');
+      var interestField = document.getElementById('interest');
+      var timezoneField = document.getElementById('timezone-field');
+      var submitButton = document.getElementById('submit-button');
+      var formStatus = document.getElementById('form-status');
+
+      window.dataLayer = window.dataLayer || [];
+      interestField.value = interest;
+
+      try {
+        var detectedTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local time';
+        timezoneField.value = detectedTimezone;
+      } catch (error) {
+        timezoneField.value = 'Local time';
+      }
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        formStatus.textContent = '';
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var originalButtonText = submitButton.innerHTML;
+        var payload = Object.fromEntries(new FormData(form).entries());
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending request…';
+
+        try {
+          var response = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) {
+            var result = await response.json().catch(function () { return {}; });
+            throw new Error(result.error || 'Request failed');
+          }
+
+          gtag('event', 'booking_request_submitted', {
+            booking_interest: payload.interest
+          });
+          document.dispatchEvent(new CustomEvent('zenith:booking-requested', { detail: { interest: payload.interest } }));
+          document.getElementById('submitted-email').textContent = payload.email;
+
+          var formPanel = document.getElementById('form-panel');
+          var nextPanel = document.getElementById('next-panel');
+          var confirmedPanel = document.getElementById('request-confirmed');
+          var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var leaveDuration = reduceMotion ? 0 : 220;
+
+          formPanel.classList.add('is-leaving');
+          nextPanel.classList.add('is-leaving');
+
+          setTimeout(function () {
+            formPanel.hidden = true;
+            nextPanel.hidden = true;
+            confirmedPanel.classList.add('visible');
+            confirmedPanel.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                confirmedPanel.classList.add('is-entered');
+              });
+            });
+          }, leaveDuration);
+        } catch (error) {
+          formStatus.textContent = error.message || 'We could not send your request. Please try again.';
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      });
+    }());
+  </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
