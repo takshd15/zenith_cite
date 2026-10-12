@@ -45,8 +45,8 @@
     banner.setAttribute('role', 'region');
     var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
     var t = en
-      ? { label: 'Cookie consent', text: 'We use Google Analytics cookies to understand how visitors use this site. They are only set if you accept.', more: 'Learn more', href: '/en/privacy/#analytics', no: 'Decline', yes: 'Accept' }
-      : { label: 'Cookietoestemming', text: 'We gebruiken cookies van Google Analytics om te begrijpen hoe bezoekers deze site gebruiken. Ze worden alleen geplaatst als je akkoord gaat.', more: 'Meer informatie', href: '/privacybeleid/#analytics', no: 'Weigeren', yes: 'Accepteren' };
+      ? { label: 'Cookie consent', text: 'We use Google Analytics cookies to understand how visitors use this site. They are only set if you accept.', more: 'How we use analytics cookies', href: '/en/privacy/#analytics', no: 'Decline', yes: 'Accept' }
+      : { label: 'Cookietoestemming', text: 'We gebruiken cookies van Google Analytics om te begrijpen hoe bezoekers deze site gebruiken. Ze worden alleen geplaatst als je akkoord gaat.', more: 'Hoe we analytics-cookies gebruiken', href: '/privacybeleid/#analytics', no: 'Weigeren', yes: 'Accepteren' };
     banner.setAttribute('aria-label', t.label);
     banner.innerHTML =
       '<p>' + t.text + ' <a href="' + t.href + '">' + t.more + '</a></p>' +
