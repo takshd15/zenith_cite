@@ -24,6 +24,7 @@
 .article-cta .button { text-decoration: none; }
 .related { padding: 48px var(--pad); border-top: 1px solid var(--line); }
 .related h2 { font-size: 32px; }
+.related ul + h2 { margin-top: 40px; }
 .related ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-left: 20px; }
 .article em { max-width: 140px; color: var(--graphite); }
 .article h3 { line-height: 1.2; }

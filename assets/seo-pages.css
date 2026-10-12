@@ -113,3 +113,5 @@ footer { display:grid; grid-template-columns:1fr auto; gap:35px; padding:55px va
   .legal { grid-column:1; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms !important; } }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 24px; font-size: 12px; }
+.breadcrumbs a, .fine-print a { text-decoration: underline; text-underline-offset: 3px; }
