@@ -60,9 +60,9 @@
     "@id": "https://zenith-cite.com/en/insights/what-an-ai-visibility-audit-includes/"
   },
   "datePublished": "2026-10-01",
-  "dateModified": "2026-10-01",
+  "dateModified": "2026-10-19",
   "inLanguage": "en-GB",
-  "wordCount": 1335,
+  "wordCount": 1336,
   "articleSection": "Audit guide",
   "author": {
     "@type": "Person",
@@ -140,15 +140,15 @@
 <p>Define mentions, recommendations and citations independently. Explain how ambiguous answers are classified and how failed runs are handled. If the brand appears in two of twelve completed checks, the report should show those twelve checks. It should not turn that limited observation into a claim about total consumer exposure.</p>
 <p>A sensible baseline is small enough to review carefully and broad enough to cover the agreed buying questions. The number of prompts is a scope decision. Ask why those prompts were chosen, rather than assuming a larger automated count means a better audit. Our <a href="/en/insights/check-business-in-chatgpt/">manual ChatGPT checking guide</a> explains a starter method you can inspect yourself.</p>
 <h2 id="technical">3. A technical access review</h2>
-<p>Review the pages that matter to the agreed questions. Check their HTTP responses, canonical URLs, indexing directives, sitemap entries and internal links. Look at what a visitor and a crawler can actually retrieve, including whether important product information is present in the page text.</p>
+<p>Review the pages that matter to the agreed questions. Check their HTTP responses, canonical URLs, indexing directives, sitemap entries and internal links. Look at what a visitor and a crawler can retrieve, including whether important product information is present in the page text.</p>
 <p>For ChatGPT search, inspect the access controls relevant to <a href="https://developers.openai.com/api/docs/bots">OAI-SearchBot</a>. For Perplexity, its <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers">crawler documentation</a> recommends allowing PerplexityBot and its published IP ranges. Review hosting or firewall restrictions as well as robots.txt. Record a confirmed block separately from a suspected access issue.</p>
-<p>The deliverable should identify affected URLs and practical consequences. “Technical SEO needs work” is not actionable. “The service page redirects to an unrelated page, and its intended content cannot be retrieved at the linked URL” gives a developer something specific to reproduce. A local fix should remain marked as awaiting deployment until the public response has been checked.</p>
+<p>The deliverable should identify affected URLs and practical consequences. “Technical SEO needs work” is too vague to act on. “The service page redirects to an unrelated page, and its intended content cannot be retrieved at the linked URL” gives a developer something specific to reproduce. A local fix should remain marked as awaiting deployment until the public response has been checked.</p>
 <h2 id="identity">4. A factual identity and content review</h2>
 <p>Compare answers with a reference sheet approved by the business. Include the correct name, website, services, prices where public, contact information and confirmed geography. Do not fill missing fields by guessing. The reference sheet gives reviewers a consistent basis for deciding whether an answer is accurate.</p>
 <p>Then inspect the pages that should support those facts. A service page needs enough detail for a buyer to understand who it is for, what is included and what happens next. Clear authorship and contact details help a reader check who is responsible. Structured data should describe those same visible facts.</p>
 <p>As a public example, Zenith Cite’s <a href="/en/about/">About page</a> identifies Taksh Dange, links his professional profile and gives a direct email address. The <a href="/en/ai-visibility-audit/">audit page</a> supplies the price and scope information. An identity review can check consistency between these pages without claiming that the presence of an About page caused an AI recommendation.</p>
 <h2 id="sources">5. Source and competitor comparisons</h2>
-<p>For each meaningful answer, list the linked sources and inspect what they actually support. Distinguish your own pages from independent reviews, directories, publisher articles and competitors’ websites. A citation beside a statement does not remove the need to check that statement against the source.</p>
+<p>For each meaningful answer, list the linked sources and inspect what they support. Distinguish your own pages from independent reviews, directories, publisher articles and competitors’ websites. A citation beside a statement does not remove the need to check that statement against the source.</p>
 <p>Compare competitors using the same customer questions and scoring definitions. Look for observable differences: a detailed integration guide, current public pricing, a relevant comparison page, or a clear explanation of the intended customer. Avoid claiming access to a platform’s private ranking logic.</p>
 <p>The report should label hypotheses. “The answer cites a competitor’s integration guide, and our site lacks equivalent documentation” is an observable gap plus a possible explanation. “The competitor won because it has more authority” skips the evidence unless authority has been defined and measured in a way relevant to the finding.</p>
 <h2 id="sample">6. An issue register your team can use</h2>
