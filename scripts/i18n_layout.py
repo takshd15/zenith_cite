@@ -5,7 +5,7 @@ Dutch is the default (site root); English lives under /en/. Route pairs come fro
 """
 import io, os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from i18n_routes import ORIGIN, EN_TO_NL, NL_TO_EN
+from i18n_routes import ORIGIN, EN_TO_NL, NL_TO_EN, NL_ONLY
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOKING = {'/boeken/', '/en/book/'}
@@ -16,7 +16,7 @@ FOOTER = {
         'cols': [
             ('Diensten', [('/ai-zichtbaarheid-audit/', 'AI-zichtbaarheid audit'), ('/geo-diensten/', 'GEO-diensten'), ('/ai-zoekoptimalisatie/', 'AI-zoekoptimalisatie'), ('/ai-vindbaarheid/', 'AI-vindbaarheid'), ('/chatgpt-vindbaarheid/', 'ChatGPT-vindbaarheid'), ('/perplexity-optimalisatie/', 'Perplexity-optimalisatie'), ('/white-label/', 'White-label GEO'), ('/boeken/?interest=custom', 'Offerte op maat')]),
             ('Branches', [('/branches/tandartsen/', 'Tandartspraktijken'), ('/branches/advocatenkantoren/', 'Advocatenkantoren'), ('/branches/makelaars/', 'Makelaars'), ('/branches/e-commerce/', 'E-commerce'), ('/branches/saas/', 'SaaS'), ('/branches/', 'Alle branches')]),
-            ('Ontdek', [('/over-ons/', 'Over Zenith Cite'), ('/#pricing', 'Pakketten en prijzen'), ('/europa/', 'Werken in de hele EU'), ('/kennisbank/', 'Kennisbank'), ('/#faqs', 'Veelgestelde vragen'), ('/boeken/', 'Gratis snapshot')]),
+            ('Ontdek', [('/over-ons/', 'Over Zenith Cite'), ('/#pricing', 'Pakketten en prijzen'), ('/europa/', 'Werken in de hele EU'), ('/kennisbank/', 'Kennisbank'), ('/generative-engine-optimization/', 'Wat is generative engine optimization?'), ('/#faqs', 'Veelgestelde vragen'), ('/boeken/', 'Gratis snapshot')]),
         ],
         'bottom': '© 2026 Zenith Cite · Resultaten in zoekmachines en AI-antwoorden zijn niet gegarandeerd.',
         'legal': [('/privacybeleid/', 'Privacybeleid'), ('/voorwaarden/', 'Voorwaarden')],
@@ -46,6 +46,8 @@ def route_of(path):
 def pair(route):
     if route.startswith('/en/') or route == '/en/':
         return 'en', route, EN_TO_NL[route]
+    if route in NL_ONLY:  # no English translation: the switcher links to the closest English page
+        return 'nl', route, NL_ONLY[route]
     return 'nl', route, NL_TO_EN[route]
 
 
@@ -86,6 +88,8 @@ def process(path):
     s = re.sub(r'\n\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">', '', s)
     alt = (f'\n  <link rel="alternate" hreflang="nl" href="{ORIGIN}{nl}">\n  <link rel="alternate" hreflang="en" href="{ORIGIN}{en}">'
            f'\n  <link rel="alternate" hreflang="x-default" href="{ORIGIN}{nl}">')
+    if route in NL_ONLY:  # hreflang lists real translations only
+        alt = f'\n  <link rel="alternate" hreflang="nl" href="{ORIGIN}{nl}">\n  <link rel="alternate" hreflang="x-default" href="{ORIGIN}{nl}">'
     s = re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + alt, s, count=1)
 
     # Header switcher: remove any previous one / old "English" nav link, then insert.

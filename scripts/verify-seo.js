@@ -28,6 +28,8 @@ const sitemapUrls = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].ma
 const indexable = [...pages].filter(([, html]) => !/name="robots" content="noindex/.test(html)).map(([route]) => origin + route).sort();
 assert.deepEqual(sitemapUrls, indexable, 'Sitemap and page indexing directives disagree');
 
+// Dutch pages with no English translation (kept in sync with NL_ONLY in i18n_routes.py).
+const nlOnly = new Set(['/generative-engine-optimization/']);
 const alternate = (html, lang) => (html.match(new RegExp(`<link rel="alternate" hreflang="${lang}" href="([^"]+)">`)) || [])[1];
 
 for (const [route, html] of pages) {
@@ -41,12 +43,17 @@ for (const [route, html] of pages) {
   }
   // Language pairs: nl + en + x-default, pointing at each other.
   const nl = alternate(html, 'nl'), en = alternate(html, 'en'), xDefault = alternate(html, 'x-default');
-  assert.ok(nl && en && xDefault, `Missing hreflang: ${route}`);
-  assert.equal(xDefault, nl, `x-default should be Dutch: ${route}`);
-  assert.equal(isEnglish(route) ? en : nl, origin + route, `hreflang self-reference: ${route}`);
-  const counterpart = new URL(isEnglish(route) ? nl : en).pathname;
-  assert.ok(pages.has(counterpart), `Missing language counterpart: ${route} -> ${counterpart}`);
-  assert.equal(alternate(pages.get(counterpart), isEnglish(route) ? 'en' : 'nl'), origin + route, `hreflang not reciprocal: ${route}`);
+  if (nlOnly.has(route)) {
+    // Dutch page without an English translation: nl + x-default only, both self-referencing.
+    assert.ok(!en && nl === origin + route && xDefault === nl, `NL-only hreflang: ${route}`);
+  } else {
+    assert.ok(nl && en && xDefault, `Missing hreflang: ${route}`);
+    assert.equal(xDefault, nl, `x-default should be Dutch: ${route}`);
+    assert.equal(isEnglish(route) ? en : nl, origin + route, `hreflang self-reference: ${route}`);
+    const counterpart = new URL(isEnglish(route) ? nl : en).pathname;
+    assert.ok(pages.has(counterpart), `Missing language counterpart: ${route} -> ${counterpart}`);
+    assert.equal(alternate(pages.get(counterpart), isEnglish(route) ? 'en' : 'nl'), origin + route, `hreflang not reciprocal: ${route}`);
+  }
   assert.ok(html.includes('class="lang-switch"'), `Missing language switcher: ${route}`);
 
   for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {

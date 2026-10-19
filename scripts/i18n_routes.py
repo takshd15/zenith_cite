@@ -45,6 +45,12 @@ OLD_NL = {
 }
 
 OLD_EN_TO_EN = {old: en for old, en, _ in PAIRS}
+# Dutch pages without an English translation -> closest English page for the language switcher.
+# These get nl + x-default hreflang only.
+NL_ONLY = {
+    '/generative-engine-optimization/': '/en/generative-engine-optimisation/',
+}
+
 EN_TO_NL = {en: nl for _, en, nl in PAIRS}
 NL_TO_EN = {nl: en for _, en, nl in PAIRS}
 
